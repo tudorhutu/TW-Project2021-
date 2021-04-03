@@ -1,8 +1,26 @@
-/* Add a black background color to the top navigation */
+
+body {
+    margin: 0;
+}
+
+.fa {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.fa-bars:before {
+    width: 10px;
+    height: 10px;
+}
+
 .toolbar {
     background: rgb(185, 182, 229);
     background: linear-gradient(90deg, rgba(185, 182, 229, 1) 0%, rgba(121, 191, 255, 1) 100%);
     overflow: hidden;
+    -webkit-box-shadow: -2px 17px 65px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 17px 65px -8px rgba(0,0,0,0.75);
+    box-shadow: -2px 17px 65px -8px rgba(0,0,0,0.75);
 }
 
 /* Style the links inside the navigation bar */
@@ -14,7 +32,7 @@
     margin: 10px 15px 15px 10px;
     text-decoration: none;
     font-size: 23px;
-    font-family: "Segoe UI";
+    font-family: "Segoe UI",serif;
 }
 
 /* Change the color of links on hover */
@@ -33,18 +51,20 @@
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 834px) {
     .toolbar a:not(:first-child) {
         display: none;
     }
 
     .toolbar a.icon {
         float: right;
+        background-image: image("/resources/lines.svg");
         display: block;
     }
+
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 834px) {
     .toolbar.responsive {
         position: relative;
     }
@@ -60,6 +80,7 @@
         display: block;
         text-align: left;
     }
+
 }
 
 .logo-img {
@@ -69,20 +90,191 @@
     padding-left: 15px;
 }
 
-#container {
+.container {
     position: relative;
     text-align: center;
-    color: white;
+    color: #000000;
+    overflow: hidden;
 }
 
-#text {
+.textUnderSlides{
+    position: relative;
+    font-size: 34px;
+    color: #180f34;
+    font-family:"Lato Light",serif;
+    word-wrap: break-word;
+}
+
+.textUnderHowTo{
+    position: relative;
+    text-align: left;
+    font-size: 34px;
+    color: #180f34;
+    bottom: 250px;
+    font-family:"Lato Light",serif;
+    word-wrap: break-word;
+    padding-left: 240px;
+}
+
+.textUnderHowTo li{
+    background: image("/resources/look.jpg");
+    margin: 35px 0;
+    padding: 4px 0 4px 20px;
+}
+
+#logotext {
     z-index: 100;
     position: absolute;
     color: white;
     font-size: 19px;
-    font-family: "Gabriola";
-    top:13px;
-    left: 26px;
+    font-family: "Gabriola",serif;
+    top:15px;
+    left: 27px;
 }
+
+.ourtitle{
+    position: relative;
+    font-size: 200px;
+    bottom: 290px;
+    font-family: Gabriola,serif;
+    text-align: center;
+    color: aliceblue;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+.howtobg{
+    width: 1920px; height: 337px; object-fit: cover;
+    -webkit-box-shadow: 4px 7px 55px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 7px 55px 12px rgba(0,0,0,0.75);
+    box-shadow: 4px 7px 55px 12px rgba(0,0,0,0.75);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    left: 50px;
+    right: 50px;
+    overflow: hidden;
+}
+.grid-item {
+    padding: 50px;
+    font-size: 30px;
+    text-align: center;
+    overflow: visible;
+}
+
+.button {
+    position: relative;
+    background-color: #000000;
+    border: #180f34;
+    color: #000000;
+    height: 192px;
+    width: 400px;
+    padding: 0;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #000000;
+    display: block;
+    position: absolute;
+    padding-top: 100%;
+    padding-left: 100%;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.button:hover{
+    opacity: 50%;
+}
+
+.buttonimage{
+    width: 400px;
+}
+
+.buttonimage:hover{
+    opacity: 50%;
+}
+
+@media only screen and (max-width: 834px) {
+    .ourtitle {
+        font-size: 75px;
+        bottom: 100px;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .textUnderHowTo{
+        bottom: 70px;
+        padding-left: 100px;
+        font-size: 25px;
+    }
+
+    .howtobg{
+        width: 1920px; height: 100px; object-fit: cover;
+    }
+
+    .button{
+        width: 300px;
+    }
+
+    .buttonimage{
+        width: 300px;
+    }
+
+    .grid-container{
+        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .textUnderSlides{
+        font-size: 20px;
+    }
+
+    .ourtitle {
+        font-size: 55px;
+        bottom: 80px;
+        -webkit-text-stroke-width: 1px;
+        line-height: 40px;
+    }
+
+    .textUnderHowTo{
+        bottom: 20px;
+        padding-left: 50px;
+        font-size: 20px;
+    }
+
+    .button{
+        width: 150px;
+    }
+
+    .buttonimage{
+        width: 150px;
+    }
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
 
 

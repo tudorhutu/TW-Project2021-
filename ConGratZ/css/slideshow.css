@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1920px;
+    max-height: 500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Caption text */
+.slidesText {
+    position: relative;
+    color: #f2f2f2;
+    font-size: 200px;
+    bottom: 300px;
+    width: 100%;
+    text-align: center;
+    font-family: Gabriola,serif;
+}
+
+.active {
+    background-color: #000000;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: cf3FadeInOut;
+    -webkit-animation-duration: 5s;
+    animation-name: cf3FadeInOut;
+    animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: .4
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: .4
+    }
+}
+
+@-webkit-keyframes cf3FadeInOut {
+    0% {
+        opacity: .4;
+    }
+    45% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .4;
+    }
+}
+
+
+
+@keyframes cf3FadeInOut {
+    0% {
+        opacity: .4;
+    }
+    45% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .4;
+    }
+}
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 834px) {
+    .slidesText {
+        font-size: 35px;
+        bottom: 55px;
+    }
+}
+
+@media only screen and (max-width: 333px) {
+    .slidesText {
+        font-size: 15px;
+        bottom: 55px;
+    }
+
+}

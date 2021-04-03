@@ -1,39 +1,113 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title> test </title>
+    <link rel="stylesheet" href="css/slideshow.css">
+    <title> CongratZ </title>
 </head>
 <body>
 
 <div class="toolbar" id="myTopnav">
     <div id="container">
-        <img class="logo-img" src="resources/Rectangle 2 copy 2.svg" alt="Trulli" width="59">
-        <p id="text">
+        <img class="logo-img" src="resources/logo.svg" alt="Trulli" width="75">
+        <p id="logotext">
             CongratZ
         </p>
     </div>
-    <a class="active" href="#home">Home</a>
-    <a href="#news">Greeting Cards</a>
-    <a href="#contact">Business Cards</a>
-    <a href="#about">About</a>
+    <a class="active" href="index.html">Home</a>
+    <a href="Greeting%20Cards.html">Greeting Cards</a>
+    <a href="https://innersloth.com/gameAmongUs.php">Business Cards</a>
+    <a href="https://innersloth.com/gameAmongUs.php">About</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
+        <div class="fa fa-bars">&#9776</div>
     </a>
 </div>
 
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "toolbar") {
-            x.className += " responsive";
-        } else {
-            x.className = "toolbar";
-        }
-    }
-</script>
+<script src="js/test.js"></script>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="resources/image.jpg" style="width:100%" alt="slide1">
+        <div class="slidesText">Design your cards!</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="resources/image2.jpg" style="width:100%" alt="slide2">
+        <div class="slidesText">Design your cards!</div>
+    </div>
+</div>
+<script src="js/slideshow.js"></script>
+
+<div class="container">
+    <p class="textUnderSlides">
+        Ever wanted an easy-to-use solution to the day-to-day problem of simply wanting to gift someone special a small
+        and yet
+        significant gift? Or a classy, yet accessible way of getting your hands on a simply good-looking business card?
+        Well,
+        look no further, since our website provides a top-notch solution for both of these questions! Pick from our
+        selection of
+        attractive greeting card templates, that include, but are not limited to: colorful and lively animations, a
+        selection of
+        beautiful professional-made backgrounds, and last, but not least, lovely interactions between the two. Or you
+        could pick
+        a more professional route and input your personal details into our business card generator, choose a design, and
+        offer yourself
+        a refined and simple way of standing out in your work environment. Simply follow our guide below to access our
+        wide range of
+        designs!
+    </p>
+</div>
+<br>
+<br>
+<div class="container">
+    <img class="howtobg" src="resources/lines.png" alt="pretty">
+    <div class="ourtitle">How to:</div>
+</div>
+
+<ul class="textUnderHowTo">
+    <li>Select your preferred template (either from the page you want, or from a list below for greeting cards)</li>
+    <li>Personalise your cards with custom text</li>
+    <li>Either save or share your creation via a custom URL link</li>
+</ul>
+
+
+<div class="container">
+    <img class="howtobg" src="resources/lines2.png" alt="pretty">
+    <div class="ourtitle">Our templates:</div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <a href="Greeting%20Cards.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+    <div class="grid-item">
+        <a href="Greeting%20Cards.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+    <div class="grid-item">
+        <a href="Greeting%20Cards.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+    <div class="grid-item">
+        <a href="Greeting%20Cards.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+    <div class="grid-item">
+        <a href="Greeting%20Cards.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+    <div class="grid-item">
+        <a href="Greeting%20Cards.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+    <div class="grid-item">
+        <a href="index.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+    <div class="grid-item">
+        <a href="Greeting%20Cards.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+    <div class="grid-item">
+        <a href="Greeting%20Cards.html" class="button"><img src="resources/placeholder.jpg" class="buttonimage" alt="test"></a>
+    </div>
+</div>
 
 </body>
 </html>
