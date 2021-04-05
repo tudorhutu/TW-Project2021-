@@ -1,0 +1,61 @@
+.card {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right:auto ;
+    height: fit-content;
+    border: 13px outset #401451;
+}
+
+.card img {
+    display: block;
+    width: 1008px;
+    height:579px;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: white;
+    border-bottom: 2px solid #180f34;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+    width: 10%;
+}
+
+input[type=text]:focus {
+    width: 85%;
+}
+
+.namewriting {
+    margin-top: 100px;
+    padding-left: 256px;
+}
+
+.submitbutton {
+    margin-bottom: 30px;
+    margin-left: 256px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(185, 182, 229) 0%, rgba(121, 191, 255, 1) 100%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    transition: all 0.5s;
+}
+
+.submitbutton:hover {
+    background: linear-gradient(90deg, rgb(135, 132, 165) 0%, rgb(59, 92, 128) 100%);
+}
+
+.submitbutton:active {
+    background: linear-gradient(90deg, rgb(121, 191, 255) 0%, rgb(185, 182, 229) 100%);;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transition: all 0.1s;
+}

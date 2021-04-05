@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/business.css">
+    <title>Business Card Generator</title>
+</head>
+<body>
+
+<div class="toolbar" id="myTopnav">
+    <div id="container">
+        <img class="logo-img" src="resources/logo.svg" alt="Trulli" width="60">
+        <p id="logotext">
+            CongratZ
+        </p>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="Greeting%20Cards.html">Greeting Cards</a>
+    <a class="active" href="Business%20Cards.html">Business Cards</a>
+    <a href="https://innersloth.com/gameAmongUs.php">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <div class="fa fa-bars">&#9776</div>
+    </a>
+</div>
+
+<script src="js/test.js"></script>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Backgrounds</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+        </div>
+    </div>
+
+    <br>
+    <div class="dropdown">
+        <button onclick="myFunction1()" class="dropbtn">Foregrounds</button>
+        <div id="myDropdown1" class="dropdown-content">
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+        </div>
+    </div>
+
+    <br>
+    <div class="dropdown">
+        <button onclick="myFunction2()" class="dropbtn">Font</button>
+        <div id="myDropdown2" class="dropdown-content">
+            <a> Comic Sans</a>
+            <a> Arial</a>
+            <a> Hobo STD</a>
+            <a> ...</a>
+        </div>
+    </div>
+
+    <br>
+    <div class="dropdown">
+        <button onclick="myFunction3()" class="dropbtn">Font Size</button>
+        <div id="myDropdown3" class="dropdown-content">
+            <a> 12</a>
+            <a> 14</a>
+            <a> 18</a>
+            <a> ...</a>
+        </div>
+    </div>
+
+    <br>
+    <div class="dropdown">
+        <button onclick="myFunction4()" class="dropbtn">Font Color</button>
+        <div id="myDropdown4" class="dropdown-content">
+            <a> White</a>
+            <a> Gray</a>
+            <a> Black</a>
+            <a> ...</a>
+        </div>
+    </div>
+
+    <br>
+    <div class="dropdown">
+        <button class="dropbtn">Logo Upload</button>
+    </div>
+</div>
+
+<div class="container" id="edittext">
+    <p class="textUnderSlides">
+        Click the arrow to start editing!
+    </p>
+</div>
+
+<div id="wrapper">
+    <div id="main">
+        <span style="cursor:pointer" onclick="openNav()"><i class="arrow right"></i></span>
+    </div>
+    <div class="card">
+        <img src="resources/placeholder3.jpg" alt="asd">
+    </div>
+</div>
+
+<script src="js/sidebar.js"></script>
+
+<div class="namewriting">
+
+    <form id="namewriting">
+        <label>
+            <input type="text" name="name" placeholder="Name">
+        </label>
+    </form>
+
+    <form id="namewriting1" >
+        <label>
+        <input type="text" name="surname" placeholder="Surname">
+        </label>
+    </form>
+
+    <form id="namewriting2">
+        <label>
+        <input type="text" name="surname" placeholder="Company Name">
+        </label>
+    </form>
+
+    <form id="namewriting3">
+        <label>
+        <input type="text" name="surname" placeholder="Phone Number">
+        </label>
+    </form>
+
+    <form id="namewriting4">
+        <label>
+        <input type="text" name="surname" placeholder="Email">
+        </label>
+    </form>
+
+    <form id="namewriting5">
+        <label>
+        <input type="text" name="surname" placeholder="Address">
+        </label>
+    </form>
+</div>
+
+<button class="submitbutton" id="submit1">Save as image file</button>
+<br>
+<button class="submitbutton" id="submit2">Share as URL</button>
+
+
+</body>
+</html>
