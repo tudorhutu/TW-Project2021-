@@ -59,3 +59,47 @@ input[type=text]:focus {
     transform: translateY(4px);
     transition: all 0.1s;
 }
+
+@media screen and (max-width: 834px) {
+
+    #wrapper{
+        overflow: scroll;
+    }
+.logo-img{
+    width: 53px;
+}
+    .card {
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .card img {
+        width: 336px;
+        height: 193px;
+    }
+
+    .arrow {
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        border-top: 45px solid #cdcadb;
+        border-radius: 100%;
+    }
+
+    .namewriting {
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+
+    input[type=text] {
+        width: 50%;
+    }
+
+    #main {
+        padding-top: 150px;
+    }
+
+    .submitbutton {
+        margin-left: 30px;
+        font-size: 20px;
+    }
+}

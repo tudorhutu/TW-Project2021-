@@ -3,6 +3,26 @@ body {
     margin: 0;
 }
 
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #3e3e3e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .fa {
     display: inline-block;
     width: 10px;
@@ -18,9 +38,9 @@ body {
     background: rgb(185, 182, 229);
     background: linear-gradient(90deg, rgba(185, 182, 229, 1) 0%, rgba(121, 191, 255, 1) 100%);
     overflow: hidden;
-    -webkit-box-shadow: -2px 17px 65px -8px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 17px 65px -8px rgba(0,0,0,0.75);
-    box-shadow: -2px 17px 65px -8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 17px 65px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 17px 65px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 17px 65px -8px rgba(0, 0, 0, 0.75);
 }
 
 /* Style the links inside the navigation bar */
@@ -32,7 +52,7 @@ body {
     margin: 10px 15px 15px 10px;
     text-decoration: none;
     font-size: 23px;
-    font-family: "Segoe UI",serif;
+    font-family: "Segoe UI", serif;
 }
 
 /* Change the color of links on hover */
@@ -58,7 +78,6 @@ body {
 
     .toolbar a.icon {
         float: right;
-        background-image: image("/resources/lines.svg");
         display: block;
     }
 
@@ -97,26 +116,26 @@ body {
     overflow: hidden;
 }
 
-.textUnderSlides{
+.textUnderSlides {
     position: relative;
     font-size: 34px;
     color: #180f34;
-    font-family:"Lato Light",serif;
+    font-family: "Lato Light", serif;
     word-wrap: break-word;
 }
 
-.textUnderHowTo{
+.textUnderHowTo {
     position: relative;
     text-align: left;
     font-size: 34px;
     color: #180f34;
     bottom: 250px;
-    font-family:"Lato Light",serif;
+    font-family: "Lato Light", serif;
     word-wrap: break-word;
     padding-left: 240px;
 }
 
-.textUnderHowTo li{
+.textUnderHowTo li {
     background: image("/resources/look.jpg");
     margin: 35px 0;
     padding: 4px 0 4px 20px;
@@ -127,27 +146,29 @@ body {
     position: absolute;
     color: white;
     font-size: 19px;
-    font-family: "Gabriola",serif;
-    top:15px;
+    font-family: "Gabriola", serif;
+    top: 15px;
     left: 27px;
 }
 
-.ourtitle{
+.ourtitle {
     position: relative;
     font-size: 200px;
     bottom: 290px;
-    font-family: Gabriola,serif;
+    font-family: Gabriola, serif;
     text-align: center;
     color: aliceblue;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black;
 }
 
-.howtobg{
-    width: 1920px; height: 337px; object-fit: cover;
-    -webkit-box-shadow: 4px 7px 55px 12px rgba(0,0,0,0.75);
-    -moz-box-shadow: 4px 7px 55px 12px rgba(0,0,0,0.75);
-    box-shadow: 4px 7px 55px 12px rgba(0,0,0,0.75);
+.howtobg {
+    width: 1920px;
+    height: 337px;
+    object-fit: cover;
+    -webkit-box-shadow: 4px 7px 55px 12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 7px 55px 12px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 7px 55px 12px rgba(0, 0, 0, 0.75);
 }
 
 .grid-container {
@@ -157,6 +178,7 @@ body {
     right: 50px;
     overflow: hidden;
 }
+
 .grid-item {
     padding: 50px;
     font-size: 30px;
@@ -198,50 +220,60 @@ body {
     transition: 0s
 }
 
-.button:hover{
+.button:hover {
     opacity: 50%;
 }
 
-.buttonimage{
+.buttonimage {
     width: 400px;
 }
 
-.buttonimage:hover{
+.buttonimage:hover {
     opacity: 50%;
 }
 
 @media only screen and (max-width: 834px) {
+    .logo-img {
+        width: 65px;
+    }
+
+    #logotext {
+        font-size: 15.5px;
+    }
+
     .ourtitle {
         font-size: 75px;
         bottom: 100px;
         -webkit-text-stroke-width: 1px;
     }
 
-    .textUnderHowTo{
+    .textUnderHowTo {
         bottom: 70px;
         padding-left: 100px;
         font-size: 25px;
     }
 
-    .howtobg{
-        width: 1920px; height: 100px; object-fit: cover;
+    .howtobg {
+        width: 1920px;
+        height: 100px;
+        object-fit: cover;
     }
 
-    .button{
+    .button {
         width: 300px;
     }
 
-    .buttonimage{
+    .buttonimage {
         width: 300px;
     }
 
-    .grid-container{
+    .grid-container {
         overflow: scroll;
     }
 }
 
 @media only screen and (max-width: 321px) {
-    .textUnderSlides{
+    .textUnderSlides {
         font-size: 20px;
     }
 
@@ -252,17 +284,17 @@ body {
         line-height: 40px;
     }
 
-    .textUnderHowTo{
+    .textUnderHowTo {
         bottom: 20px;
         padding-left: 50px;
         font-size: 20px;
     }
 
-    .button{
+    .button {
         width: 150px;
     }
 
-    .buttonimage{
+    .buttonimage {
         width: 150px;
     }
 }
@@ -275,25 +307,7 @@ body {
 }
 
 
-/*scrollbar*/
-::-webkit-scrollbar {
-    width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-    background-color: #3e3e3e;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
 
 
 

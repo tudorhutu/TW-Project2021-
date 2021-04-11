@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
     <title>Greeting Card Generator</title>
 </head>
 <body>
-
+<script src="js/test.js"></script>
 <div class="toolbar" id="myTopnav">
     <div id="container">
         <img class="logo-img" src="resources/logo.svg" alt="Trulli" width="60">
@@ -20,13 +20,13 @@
     <a href="index.html">Home</a>
     <a class="active" href="Greeting%20Cards.html">Greeting Cards</a>
     <a href="Business%20Cards.html">Business Cards</a>
-    <a href="https://innersloth.com/gameAmongUs.php">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <div class="fa fa-bars">&#9776</div>
+    <a href="About.html">About</a>
+    <a href="index.html" class="icon">
+        <div class="fa fa-bars" style="font-size: 40px;margin-top: -15px">&#8962</div>
     </a>
 </div>
 
-<script src="js/test.js"></script>
+
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -58,10 +58,34 @@
     </div>
     <br>
     <div class="dropdown">
-        <button onclick="myFunction3()" class="dropbtn">Contact</button>
+        <button onclick="myFunction3()" class="dropbtn">Font</button>
         <div id="myDropdown3" class="dropdown-content">
-            <a href="">Hutu Tudor</a>
-            <a href="">Iovite Bogdan</a>
+            <a> Comic Sans</a>
+            <a> Arial</a>
+            <a> Hobo STD</a>
+            <a> ...</a>
+        </div>
+    </div>
+
+    <br>
+    <div class="dropdown">
+        <button onclick="myFunction4()" class="dropbtn">Font Size</button>
+        <div id="myDropdown4" class="dropdown-content">
+            <a> 12</a>
+            <a> 14</a>
+            <a> 18</a>
+            <a> ...</a>
+        </div>
+    </div>
+
+    <br>
+    <div class="dropdown">
+        <button onclick="myFunction5()" class="dropbtn">Font Color</button>
+        <div id="myDropdown5" class="dropdown-content">
+            <a> White</a>
+            <a> Gray</a>
+            <a> Black</a>
+            <a> ...</a>
         </div>
     </div>
 </div>
@@ -85,11 +109,15 @@
 <div class="namewriting">
 
     <form id="namewriting">
-        <input type="text" name="name" placeholder="Name">
+        <label>
+            <input type="text" name="name" placeholder="Name">
+        </label>
     </form>
 
     <form id="namewriting1" >
-        <input type="text" name="surname" placeholder="Surname">
+        <label>
+            <input type="text" name="surname" placeholder="Surname">
+        </label>
     </form>
 </div>
 

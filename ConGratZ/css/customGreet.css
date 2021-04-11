@@ -48,10 +48,10 @@ input[type=text]:focus {
 }
 
 
-
 .card {
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
     height: fit-content;
     border: 13px outset #401451;
 }
@@ -61,9 +61,13 @@ input[type=text]:focus {
     width: 1080px;
 }
 
-@media screen and (max-width: 834px) {
 
-    #wrapper{
+@media screen and (max-width: 834px) {
+    .logo-img{
+        width: 53px;
+    }
+
+    #wrapper {
         overflow: scroll;
     }
 

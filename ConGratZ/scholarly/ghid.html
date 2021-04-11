@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>MEqX - Documentation</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <a href="../index.html" class="logo">Main Site</a>
+        <div class="status">ConGratZ - Documentation</div>
+      </div>
+      <h1>Ghid de utilizare</h1>
+    </header>
+
+    <div role="contentinfo">
+      <dl>
+        <dt>Autori</dt>
+        <dd>
+          Hutu Tudor, Iovite Bogdan
+        </dd>
+        <dt>GitHub</dt>
+        <dd>
+          <a href="https://github.com/tudorhutu/TW-Project2021-">Link catre repository-ul proiectului</a>
+        </dd>
+        <dt>Proiect realizat in cadrul cursului Tehnologii Web de la Facultatea de Informatica, Universitatea "Al I. Cuza" Iasi</dt>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Cerinta</h2>
+      <p>
+        <dt>ConGratZ </dt>
+        Să se realizeze o aplicație Web prin intermediul căreia să se poată crea felicitări și carți de vizită.
+
+        Felicitările pot avea diverse efecte aplicate (via CSS ori GIF-uri animate vizibile printr-o arie delimitată clar – de exemplu ninsoare vizibilă doar în dreptul ferestrei sau flacară vizibilă doar prin fantele unui dovleac decupat de Halloween) și vor putea fi trimise între utilizatori sau către diverse persoane externe via URL.
+        Aplicația va permite și realizarea de carți de vizită, eventual pe baza unui document XML ce include numele + datele de contact ale mai multor persoane, fiind capabilă să exporte aceste carduri într-un fișier PDF pentru a fi tiparite. Cardurile vor fi disponibile și în format electronic (e.g. vcard sau QR code) ce va putea fi trimis ca fișier atașat unui email.
+      </p>
+    </section>
+    
+
+    <section id="search">
+      <h2>Explorarea</h2>
+      <p>
+        Utilizatorii pot crea felicitari sau carti de vizita. In bara de sus vor fi urmatoarele butoane:
+        <ul>
+          <li>Home: trimite utiliziatorul catre homepage-ul website-ului</li>
+          <li>Greeting cards:trimite utilizatorul catre pagina in care poate crea o felicitare</li>
+          <li>Business cards: trimite utilizatorul catre pagina in care poate crea o carte de vizita</li>
+          <li>About: trimite utilizatorul catre pagina cu informatii relevante si un link la raportul in Scholarly HTML</li>
+      In homepage, vor exista mai multe template-uri de felicitari, care, atunci cand sunt apasate vor redirectiona utilizaotrul catre pagina in care poate crea o felicitare
+        </ul>
+      </p>
+    </section>
+    <section id="upload">
+      <h2>Editarea</h2>
+      <p>
+        Utilizatorii                 vor putea edita, descarca si distribui felicitari/carti de vizita
+      </p>
+      <section id="editor1">
+        <h2>Editorul de felicitari</h2>
+        <p>
+          Editorul contine un sidebar de unde utilizatorul poate alege un fundal, animatie dintr-o selectie data.
+          Exista, de asemenea formulare de input pentru nume si prenume, pentru personalizarea felicitarii.
+          In partea de jos a paginii se afla butoanele pentru salvare/distribuire prin link.
+        </p>
+      </section>
+      <section id="editor2">
+        <h2>Editorul de carti de vizita</h2>
+        <p>
+          Editorul contine un sidebar de unde utilizatorul poate alege un fundal, font,culoarea si marimea acestuia dintr-o selectie data.
+          Exista, de asemenea formulare de input pentru nume,prenume,numele companie,telefon si email pentru personalizarea carii de vizita.
+          In partea de jos a paginii se afla butoanele pentru salvare/distribuire prin link.
+        </p>
+      </section>
+    </section>
+  </body>
+</html>
