@@ -27,7 +27,6 @@
 </div>
 
 
-
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="dropdown">
@@ -71,10 +70,8 @@
     <div class="dropdown">
         <button onclick="myFunction4()" class="dropbtn">Font Size</button>
         <div id="myDropdown4" class="dropdown-content">
-            <a> 12</a>
-            <a> 14</a>
-            <a> 18</a>
-            <a> ...</a>
+            <a>  Name size: <input type="range" id="topsize" min="0.05" max="0.25" value="0.15" step="0.01"></a>
+            <a> Surname size: <input type="range" id="bottomsize" min="0.05" max="0.25" value="0.15" step="0.01"></a>
         </div>
     </div>
 
@@ -82,48 +79,42 @@
     <div class="dropdown">
         <button onclick="myFunction5()" class="dropbtn">Font Color</button>
         <div id="myDropdown5" class="dropdown-content">
-            <a> White</a>
-            <a> Gray</a>
-            <a> Black</a>
-            <a> ...</a>
+            <a> <input type="color" id="toptextcolor"></a>
+            <a> <input type="color" id="bottomtextcolor"></a>
         </div>
     </div>
 </div>
 
 <div class="container" id="edittext">
     <p class="textUnderSlides">
-            Click the arrow to start editing!
+        Click the arrow to start editing!
     </p>
 </div>
 
 <div id="wrapper">
-<div id="main">
-    <span style="cursor:pointer" onclick="openNav()"><i class="arrow right"></i></span>
-</div>
+    <div id="main">
+        <span style="cursor:pointer" onclick="openNav()"><i class="arrow right"></i></span>
+    </div>
 
-<div class="card">
-    <img src="resources/placeholder2.jpg" alt="asd">
-</div>
+    <div class="card">
+        <img src="resources/placeholder2.jpg" id="placeholder" alt="asd">
+        <canvas id="canvass"></canvas>
+    </div>
 </div>
 <script src="js/sidebar.js"></script>
 <div class="namewriting">
 
-    <form id="namewriting">
-        <label>
-            <input type="text" name="name" placeholder="Name">
-        </label>
-    </form>
+    <textarea id="top-text"></textarea>
+    <textarea id="bottom-text"></textarea>
 
-    <form id="namewriting1" >
-        <label>
-            <input type="text" name="surname" placeholder="Surname">
-        </label>
-    </form>
 </div>
-
 <button class="submitbutton" id="submit1">Save as image file</button>
 <br>
 <button class="submitbutton" id="submit2">Share as URL</button>
+<p>
+    <button class="submitbutton" id="generate"><span id="generatetext">Generate!</span></button>
+</p>
 
+<script src="js/imageGenerator.js"></script>
 </body>
 </html>

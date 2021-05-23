@@ -60,6 +60,7 @@ input[type=text]:focus {
     transition: all 0.1s;
 }
 
+
 @media screen and (max-width: 834px) {
 
     #wrapper{

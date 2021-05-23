@@ -31,8 +31,9 @@ body {
     transition: 0.3s;
 }
 
+
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #000000;
 }
 
 .sidenav .closebtn {
@@ -97,8 +98,9 @@ body {
 }
 
 .dropdown a:hover {
-    background-color: #ddd;
+    background-color: #7a7a7a;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .show {
