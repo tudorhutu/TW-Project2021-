@@ -1,35 +1,27 @@
-let topTextInput, bottomTextInput, topsize, bottomsize, topcol, bottomcol, image, generateBtn, canvas, ctx, placeholder;
+let topTextInput, bottomTextInput, topsize, bottomsize, topcol, bottomcol, image, generateBtn, canvas, ctx, placeholder,
+    customurl, customurlf, saveimage, bgInput, foreground, animation;
 
 function generate(img, topTextInput, bottomTextInput, topsize, bottomsize, topcol, bottomcol) {
     let fontsize;
+    let str1 = "From: ";
     canvas.width = img.width;
     canvas.height = img.height;
-
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0);
-
 
     ctx.fillStyle = topcol;
     ctx.strokeStyle = 'black';
     ctx.textAlign = 'center';
 
-    fontsize = canvas.width * topsize;
+
+    fontsize = canvas.width / 4 * topsize;
     ctx.font = fontsize + 'px Impact';
     ctx.lineWidth = fontsize / 30;
-
-    ctx.textBaseline = 'top';
-    ctx.fillText(topTextInput, canvas.width / 2, 0, canvas.width);
-    ctx.strokeText(topTextInput, canvas.width / 2, 0, canvas.width);
-
-    fontsize = canvas.width * bottomsize;
-    ctx.font = fontsize + 'px Impact';
-    ctx.lineWidth = fontsize / 30;
-
     ctx.fillStyle = bottomcol;
 
     ctx.textBaseline = 'bottom';
-    ctx.fillText(bottomTextInput, canvas.width / 2, canvas.height, canvas.width);
-    ctx.strokeText(bottomTextInput, canvas.width / 2, canvas.height, canvas.width);
+    ctx.fillText(str1.concat(topTextInput, " ", bottomTextInput), canvas.width / 2 + canvas.width / 4, canvas.height - 30, canvas.width / 3);
+    ctx.strokeText(str1.concat(topTextInput, " ", bottomTextInput), canvas.width / 2 + canvas.width / 4, canvas.height - 30, canvas.width / 3);
 }
 
 function init() {
@@ -43,21 +35,46 @@ function init() {
     generateBtn = document.getElementById('generate');
     canvas = document.getElementById('canvass');
     placeholder = document.getElementById("placeholder");
-
+    customurl = document.getElementById("custom");
+    customurlf = document.getElementById("customf");
+    saveimage = document.getElementById("submiturl");
+    bgInput = document.getElementsByClassName("bgimagein");
+    foreground = document.getElementById("foreground");
+    animation = document.getElementById("animation");
     ctx = canvas.getContext('2d');
 
     canvas.width = canvas.height = 0;
 
     generateBtn.addEventListener('click', function () {
         let img = new Image;
-        img.src = 'https://hashtaghyena.com/wp-content/uploads/2021/01/IMG_4830.jpeg';
+        if (!customurl.value) {
+            img.src = 'https://i.kym-cdn.com/entries/icons/original/000/036/482/cover5.jpg';
+        } else {
+            img.src = customurl.value;
+        }
+
         img.onload = function () {
-            generate(img, topTextInput.value, bottomTextInput.value, topsize.value, bottomsize.value, topcol.value, bottomcol.value);
             placeholder.style.display = 'none';
+            generate(img, topTextInput.value, bottomTextInput.value, topsize.value, bottomsize.value, topcol.value, bottomcol.value);
+
         }
 
     });
+
 }
 
+function loadImage(img) {
+    customurl.value = img.src;
+}
+
+function loadForeground(img) {
+    foreground.src = img.src;
+    foreground.style.display = "block";
+}
+
+function loadAnimation(img) {
+    animation.src = img.src;
+    animation.style.display= "block";
+}
 
 init();

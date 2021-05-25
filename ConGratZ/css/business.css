@@ -61,6 +61,18 @@ input[type=text]:focus {
 }
 
 
+#canvass{
+    margin-bottom: -5px;
+    min-width: 1000px;
+    max-width: 1000px;
+}
+
+#placeholder{
+    margin-bottom: -19px;
+}
+
+#custom{display: none;}
+
 @media screen and (max-width: 834px) {
 
     #wrapper{

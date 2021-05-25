@@ -10,7 +10,7 @@ function openNav() {
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "10px";
+    document.getElementById("mySidenav").style.width = "0px";
     document.body.style.backgroundColor = "white";
     document.getElementById("namewriting").style.opacity="100%";
     document.getElementById("namewriting1").style.opacity="100%";

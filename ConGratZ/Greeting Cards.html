@@ -32,40 +32,29 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Backgrounds</button>
         <div id="myDropdown" class="dropdown-content">
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholder.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholder2.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholder3.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
         </div>
     </div>
     <br>
     <div class="dropdown">
         <button onclick="myFunction1()" class="dropbtn">Foregrounds</button>
         <div id="myDropdown1" class="dropdown-content">
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/lines.png" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
+            <a> <img src="resources/placeholdergif.gif" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
         </div>
     </div>
     <br>
     <div class="dropdown">
         <button onclick="myFunction2()" class="dropbtn">Animations</button>
         <div id="myDropdown2" class="dropdown-content">
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholdergif.gif" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
         </div>
     </div>
-    <br>
-    <div class="dropdown">
-        <button onclick="myFunction3()" class="dropbtn">Font</button>
-        <div id="myDropdown3" class="dropdown-content">
-            <a> Comic Sans</a>
-            <a> Arial</a>
-            <a> Hobo STD</a>
-            <a> ...</a>
-        </div>
-    </div>
-
     <br>
     <div class="dropdown">
         <button onclick="myFunction4()" class="dropbtn">Font Size</button>
@@ -79,10 +68,11 @@
     <div class="dropdown">
         <button onclick="myFunction5()" class="dropbtn">Font Color</button>
         <div id="myDropdown5" class="dropdown-content">
-            <a> <input type="color" id="toptextcolor"></a>
-            <a> <input type="color" id="bottomtextcolor"></a>
+            <a> <input type="color" id="toptextcolor" value="#ffffff"></a>
+            <a> <input type="color" id="bottomtextcolor" value="#ffffff"></a>
         </div>
     </div>
+    <textarea id="custom" placeholder="custom url"></textarea>
 </div>
 
 <div class="container" id="edittext">
@@ -99,18 +89,20 @@
     <div class="card">
         <img src="resources/placeholder2.jpg" id="placeholder" alt="asd">
         <canvas id="canvass"></canvas>
+        <img src="" id="animation">
+        <img src=" " id="foreground">
     </div>
 </div>
 <script src="js/sidebar.js"></script>
 <div class="namewriting">
 
-    <textarea id="top-text"></textarea>
-    <textarea id="bottom-text"></textarea>
+    <textarea id="top-text" placeholder="name"></textarea>
+    <textarea id="bottom-text" placeholder="surname"></textarea>
 
 </div>
-<button class="submitbutton" id="submit1">Save as image file</button>
+<button class="submitbutton" id="saveimage">Save as image file</button>
 <br>
-<button class="submitbutton" id="submit2">Share as URL</button>
+<button class="submitbutton" id="submiturl">Share as URL</button>
 <p>
     <button class="submitbutton" id="generate"><span id="generatetext">Generate!</span></button>
 </p>

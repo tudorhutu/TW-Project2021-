@@ -32,9 +32,9 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Backgrounds</button>
         <div id="myDropdown" class="dropdown-content">
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
+            <a> <img src="resources/placeholder.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
+            <a> <img src="resources/placeholder3.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
         </div>
     </div>
 
@@ -63,10 +63,8 @@
     <div class="dropdown">
         <button onclick="myFunction3()" class="dropbtn">Font Size</button>
         <div id="myDropdown3" class="dropdown-content">
-            <a> 12</a>
-            <a> 14</a>
-            <a> 18</a>
-            <a> ...</a>
+            <a> <input type="range" id="topsize" min="0.10" max="0.25" value="0.15" step="0.01"></a>
+            <a> <input type="range" id="rightsize" min="0.10" max="0.25" value="0.15" step="0.01"></a>
         </div>
     </div>
 
@@ -74,10 +72,8 @@
     <div class="dropdown">
         <button onclick="myFunction4()" class="dropbtn">Font Color</button>
         <div id="myDropdown4" class="dropdown-content">
-            <a> White</a>
-            <a> Gray</a>
-            <a> Black</a>
-            <a> ...</a>
+            <a> <input type="color" id="toptextcolor" value="#ffffff"></a>
+            <a> <input type="color" id="bottomtextcolor" value="#ffffff"></a>
         </div>
     </div>
 
@@ -85,6 +81,7 @@
     <div class="dropdown">
         <button class="dropbtn">Logo Upload</button>
     </div>
+    <textarea id="custom" placeholder="custom url"></textarea>
 </div>
 
 <div class="container" id="edittext">
@@ -98,7 +95,8 @@
         <span style="cursor:pointer" onclick="openNav()"><i class="arrow right"></i></span>
     </div>
     <div class="card">
-        <img src="resources/placeholder3.jpg" alt="asd">
+        <img src="resources/placeholder3.jpg" id="placeholder" alt="asd">
+        <canvas id="canvass" title="Right click -> &quot;Save image as...&quot;"></canvas>
     </div>
 </div>
 
@@ -108,45 +106,48 @@
 
     <form id="namewriting">
         <label>
-            <input type="text" name="name" placeholder="Name">
+            <textarea id="top-text" placeholder="Name"></textarea>
         </label>
     </form>
 
     <form id="namewriting1" >
         <label>
-        <input type="text" name="surname" placeholder="Surname">
+            <textarea id="bottom-text" placeholder="Surname"></textarea>
         </label>
     </form>
 
     <form id="namewriting2">
         <label>
-        <input type="text" name="surname" placeholder="Company Name">
+        <textarea id="company" placeholder="Company"></textarea>
         </label>
     </form>
 
     <form id="namewriting3">
         <label>
-        <input type="text" name="surname" placeholder="Phone Number">
+            <textarea id="phone" placeholder="Phone Number"></textarea>
         </label>
     </form>
 
     <form id="namewriting4">
         <label>
-        <input type="text" name="surname" placeholder="Email">
+            <textarea id="email" placeholder="Email"></textarea>
         </label>
     </form>
 
     <form id="namewriting5">
         <label>
-        <input type="text" name="surname" placeholder="Address">
+            <textarea id="address" placeholder="Address"></textarea>
         </label>
     </form>
 </div>
 
+
 <button class="submitbutton" id="submit1">Save as image file</button>
 <br>
 <button class="submitbutton" id="submit2">Share as URL</button>
-
+<br>
+<button class="submitbutton" id="generate">Generate!</button>
 
 </body>
+<script src="js/cardGenerator.js"></script>
 </html>

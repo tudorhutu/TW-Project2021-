@@ -72,6 +72,19 @@ input[type=text]:focus {
     max-width: 1000px;
 }
 
+#foreground{
+    display: none;
+    margin-top: -500px;
+    position: absolute;
+}
+#animation{
+    display: none;
+    margin-top: -590px;
+    position: absolute;
+}
+
+#custom{display: none}
+
 @media screen and (max-width: 834px) {
     .logo-img{
         width: 53px;
