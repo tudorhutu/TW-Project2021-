@@ -1,11 +1,10 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn;
+    customurl, addressIn, phoneIn, emailIn, huein;
 
-function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
+function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol, huein) {
     let fontsize;
     canvas.width = img.width;
     canvas.height = img.height;
-
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0);
 
@@ -37,14 +36,14 @@ function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, p
     ctx.fillStyle = topcol;
     ctx.textAlign = 'right';
 
-    ctx.fillText(addressIn, canvas.width-120 , 180, canvas.width);
-    ctx.strokeText(addressIn, canvas.width -120, 180, canvas.width);
+    ctx.fillText(addressIn, canvas.width - 120, 180, canvas.width);
+    ctx.strokeText(addressIn, canvas.width - 120, 180, canvas.width);
 
-    ctx.fillText(phoneIn, canvas.width-120 , 300, canvas.width);
-    ctx.strokeText(phoneIn, canvas.width -120, 300, canvas.width);
+    ctx.fillText(phoneIn, canvas.width - 120, 300, canvas.width);
+    ctx.strokeText(phoneIn, canvas.width - 120, 300, canvas.width);
 
-    ctx.fillText(emailIn, canvas.width-120 , 430, canvas.width);
-    ctx.strokeText(emailIn, canvas.width -120, 430, canvas.width);
+    ctx.fillText(emailIn, canvas.width - 120, 430, canvas.width);
+    ctx.strokeText(emailIn, canvas.width - 120, 430, canvas.width);
 }
 
 function init() {
@@ -62,6 +61,7 @@ function init() {
     addressIn = document.getElementById("address");
     phoneIn = document.getElementById("phone");
     emailIn = document.getElementById("email");
+    huein = document.getElementById("hueshift")
 
     ctx = canvas.getContext('2d');
 
@@ -77,7 +77,7 @@ function init() {
 
         img.onload = function () {
             placeholder.style.display = 'none';
-            generate(img, topTextInput.value, bottomTextInput.value, companyImput.value, addressIn.value, phoneIn.value, emailIn.value, topsize.value, rightsize.value, topcol.value, bottomcol.value);
+            generate(img, topTextInput.value, bottomTextInput.value, companyImput.value, addressIn.value, phoneIn.value, emailIn.value, topsize.value, rightsize.value, topcol.value, bottomcol.value, huein.value);
 
         }
 
