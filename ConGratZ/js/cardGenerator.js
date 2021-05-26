@@ -1,7 +1,7 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, huein;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk;
 
-function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol, huein) {
+function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
     canvas.width = img.width;
     canvas.height = img.height;
@@ -14,7 +14,7 @@ function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, p
     ctx.textAlign = 'left';
 
     fontsize = canvas.width * topsize / 3;
-    ctx.font = fontsize + 'px Impact';
+    ctx.font = 'bold ' + fontsize + 'px arial';
     ctx.lineWidth = fontsize / 30;
     ctx.fillStyle = bottomcol;
 
@@ -22,28 +22,34 @@ function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, p
     ctx.fillText(topTextInput.concat(" ", bottomTextInput), canvas.width / 2 - canvas.width / 3 - 160, canvas.height - 80, canvas.width);
     ctx.strokeText(topTextInput.concat(" ", bottomTextInput), canvas.width / 2 - canvas.width / 3 - 160, canvas.height - 80, canvas.width);
 
-    fontsize = canvas.width * topsize / 5;
-    ctx.font = fontsize + 'px Impact';
+    fontsize = canvas.width * topsize / 4;
+    ctx.font = 'bold ' + fontsize + 'px arial';
     ctx.lineWidth = fontsize / 30;
     ctx.fillStyle = bottomcol;
 
     ctx.fillText(companyImput, canvas.width / 2 - canvas.width / 3 - 160, canvas.height - 20, canvas.width);
     ctx.strokeText(companyImput, canvas.width / 2 - canvas.width / 3 - 160, canvas.height - 20, canvas.width);
 
-    fontsize = canvas.width * rightsize / 7;
-    ctx.font = fontsize + 'px Impact';
+    fontsize = canvas.width * rightsize / 8 - 8;
+    ctx.font = 'bold ' + fontsize + 'px arial';
     ctx.lineWidth = fontsize / 30;
     ctx.fillStyle = topcol;
     ctx.textAlign = 'right';
 
     ctx.fillText(addressIn, canvas.width - 120, 180, canvas.width);
-    ctx.strokeText(addressIn, canvas.width - 120, 180, canvas.width);
+    // ctx.strokeText(addressIn, canvas.width - 120, 180, canvas.width);
+
+    fontsize = canvas.width * rightsize / 6;
+    ctx.font = 'bold ' + fontsize + 'px arial';
+    ctx.lineWidth = fontsize / 30;
+    ctx.fillStyle = topcol;
+    ctx.textAlign = 'right';
 
     ctx.fillText(phoneIn, canvas.width - 120, 300, canvas.width);
-    ctx.strokeText(phoneIn, canvas.width - 120, 300, canvas.width);
+    // ctx.strokeText(phoneIn, canvas.width - 120, 300, canvas.width);
 
     ctx.fillText(emailIn, canvas.width - 120, 430, canvas.width);
-    ctx.strokeText(emailIn, canvas.width - 120, 430, canvas.width);
+    // ctx.strokeText(emailIn, canvas.width - 120, 430, canvas.width);
 }
 
 function init() {
@@ -61,7 +67,7 @@ function init() {
     addressIn = document.getElementById("address");
     phoneIn = document.getElementById("phone");
     emailIn = document.getElementById("email");
-    huein = document.getElementById("hueshift")
+    downloadLnk =document.getElementById("downloadLnk");
 
     ctx = canvas.getContext('2d');
 
@@ -70,14 +76,15 @@ function init() {
     generateBtn.addEventListener('click', function () {
         let img = new Image;
         if (!customurl.value) {
-            img.src = 'https://i.kym-cdn.com/entries/icons/original/000/036/482/cover5.jpg';
+            return;
         } else {
             img.src = customurl.value;
         }
 
         img.onload = function () {
             placeholder.style.display = 'none';
-            generate(img, topTextInput.value, bottomTextInput.value, companyImput.value, addressIn.value, phoneIn.value, emailIn.value, topsize.value, rightsize.value, topcol.value, bottomcol.value, huein.value);
+            downloadLnk.style.display = 'block';
+            generate(img, topTextInput.value, bottomTextInput.value, companyImput.value, addressIn.value, phoneIn.value, emailIn.value, topsize.value, rightsize.value, topcol.value, bottomcol.value);
 
         }
 
@@ -90,3 +97,9 @@ init();
 function loadImage(img) {
     customurl.value = img.src;
 }
+
+function download() {
+    var dt = canvas.toDataURL('image/jpg', 1.0);
+    this.href = dt;
+};
+downloadLnk.addEventListener('click', download, false);

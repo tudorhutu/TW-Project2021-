@@ -73,6 +73,14 @@ input[type=text]:focus {
 
 #custom{display: none;}
 
+textarea{
+    resize: none;
+    width: 30%;
+}
+
+#downloadLnk{
+    display: none;
+}
 
 
 @media screen and (max-width: 834px) {

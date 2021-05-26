@@ -47,74 +47,65 @@ function myFunction() {
 
 function myFunction1() {
     document.getElementById("myDropdown1").classList.toggle("show");
-    if (document.getElementById("myDropdown").className === "dropdown-content show")
-        document.getElementById("myDropdown").classList.toggle("show");
-    if (document.getElementById("myDropdown2").className === "dropdown-content show")
-        document.getElementById("myDropdown2").classList.toggle("show");
-    if (document.getElementById("myDropdown3").className === "dropdown-content show")
-        document.getElementById("myDropdown3").classList.toggle("show");
-    if (document.getElementById("myDropdown4").className === "dropdown-content show")
-        document.getElementById("myDropdown4").classList.toggle("show");
-    if (document.getElementById("myDropdown5").className === "dropdown-content show")
-        document.getElementById("myDropdown5").classList.toggle("show");
+    if (document.getElementById("myDropdown2"))
+        if (document.getElementById("myDropdown2").className === "dropdown-content show") {
+            document.getElementById("myDropdown2").classList.toggle("show");
+        }
+    if (document.getElementById("myDropdown3"))
+        if (document.getElementById("myDropdown3").className === "dropdown-content show") {
+            document.getElementById("myDropdown3").classList.toggle("show");
+        }
+    if (document.getElementById("myDropdown4"))
+        if (document.getElementById("myDropdown4").className === "dropdown-content show") {
+            document.getElementById("myDropdown4").classList.toggle("show");
+        }
+    if (document.getElementById("myDropdown5"))
+        if (document.getElementById("myDropdown5").className === "dropdown-content show") {
+            document.getElementById("myDropdown5").classList.toggle("show");
+        }
 
 }
 
 function myFunction2() {
     document.getElementById("myDropdown2").classList.toggle("show");
-    if (document.getElementById("myDropdown1").className === "dropdown-content show")
-        document.getElementById("myDropdown1").classList.toggle("show");
-    if (document.getElementById("myDropdown").className === "dropdown-content show")
-        document.getElementById("myDropdown").classList.toggle("show");
-    if (document.getElementById("myDropdown3").className === "dropdown-content show")
-        document.getElementById("myDropdown3").classList.toggle("show");
-    if (document.getElementById("myDropdown4").className === "dropdown-content show")
-        document.getElementById("myDropdown4").classList.toggle("show");
-    if (document.getElementById("myDropdown5").className === "dropdown-content show")
-        document.getElementById("myDropdown5").classList.toggle("show");
+    if (document.getElementById("myDropdown3"))
+        if (document.getElementById("myDropdown3").className === "dropdown-content show") {
+            document.getElementById("myDropdown3").classList.toggle("show");
+        }
+    if (document.getElementById("myDropdown4"))
+        if (document.getElementById("myDropdown4").className === "dropdown-content show") {
+            document.getElementById("myDropdown4").classList.toggle("show");
+        }
+    if (document.getElementById("myDropdown5"))
+        if (document.getElementById("myDropdown5").className === "dropdown-content show") {
+            document.getElementById("myDropdown5").classList.toggle("show");
+        }
 }
 
 function myFunction3() {
     document.getElementById("myDropdown3").classList.toggle("show");
-    if (document.getElementById("myDropdown1").className === "dropdown-content show")
-        document.getElementById("myDropdown1").classList.toggle("show");
-    if (document.getElementById("myDropdown2").className === "dropdown-content show")
-        document.getElementById("myDropdown2").classList.toggle("show");
-    if (document.getElementById("myDropdown").className === "dropdown-content show")
-        document.getElementById("myDropdown").classList.toggle("show");
-    if (document.getElementById("myDropdown4").className === "dropdown-content show")
-        document.getElementById("myDropdown4").classList.toggle("show");
-    if (document.getElementById("myDropdown5").className === "dropdown-content show")
-        document.getElementById("myDropdown5").classList.toggle("show");
+    if (document.getElementById("myDropdown4"))
+        if (document.getElementById("myDropdown4").className === "dropdown-content show") {
+            document.getElementById("myDropdown4").classList.toggle("show");
+        }
+    if (document.getElementById("myDropdown5"))
+        if (document.getElementById("myDropdown5").className === "dropdown-content show") {
+            document.getElementById("myDropdown5").classList.toggle("show");
+        }
 
 }
 
 function myFunction4() {
     document.getElementById("myDropdown4").classList.toggle("show");
-    if (document.getElementById("myDropdown1").className === "dropdown-content show")
-        document.getElementById("myDropdown1").classList.toggle("show");
-    if (document.getElementById("myDropdown2").className === "dropdown-content show")
-        document.getElementById("myDropdown2").classList.toggle("show");
-    if (document.getElementById("myDropdown3").className === "dropdown-content show")
-        document.getElementById("myDropdown3").classList.toggle("show");
-    if (document.getElementById("myDropdown").className === "dropdown-content show")
-        document.getElementById("myDropdown").classList.toggle("show");
-    if (document.getElementById("myDropdown5").className === "dropdown-content show")
-        document.getElementById("myDropdown5").classList.toggle("show");
+    if (document.getElementById("myDropdown5"))
+        if (document.getElementById("myDropdown5").className === "dropdown-content show") {
+            document.getElementById("myDropdown5").classList.toggle("show");
+        }
 }
 
 function myFunction5() {
     document.getElementById("myDropdown5").classList.toggle("show");
-    if (document.getElementById("myDropdown1").className === "dropdown-content show")
-        document.getElementById("myDropdown1").classList.toggle("show");
-    if (document.getElementById("myDropdown2").className === "dropdown-content show")
-        document.getElementById("myDropdown2").classList.toggle("show");
-    if (document.getElementById("myDropdown3").className === "dropdown-content show")
-        document.getElementById("myDropdown3").classList.toggle("show");
-    if (document.getElementById("myDropdown4").className === "dropdown-content show")
-        document.getElementById("myDropdown4").classList.toggle("show");
-    if (document.getElementById("myDropdown").className === "dropdown-content show")
-        document.getElementById("myDropdown").classList.toggle("show");
+
 }
 
 // Close the dropdown if the user clicks outside of it

@@ -32,9 +32,11 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Backgrounds</button>
         <div id="myDropdown" class="dropdown-content">
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
+            <a> <img src="resources/asda2.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
             <a> <img src="resources/asda.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
-            <a> <img src="resources/placeholder3.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
+            <a> <img src="resources/asda3.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
+            <a> <img src="resources/asda4.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
+            <a> <img src="resources/asda5.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
         </div>
     </div>
 
@@ -57,7 +59,7 @@
     <div class="dropdown">
         <button onclick="myFunction4()" class="dropbtn">Font Color</button>
         <div id="myDropdown4" class="dropdown-content">
-            <a> <input type="color" id="toptextcolor" value="#ffffff"></a>
+            <a> <input type="color" id="toptextcolor" value="#02091f"></a>
             <a> <input type="color" id="bottomtextcolor" value="#ffffff"></a>
         </div>
     </div>
@@ -77,7 +79,7 @@
         <span style="cursor:pointer" onclick="openNav()"><i class="arrow right"></i></span>
     </div>
     <div class="card">
-        <img src="resources/placeholder3.jpg" id="placeholder" alt="asd">
+        <img src="resources/placeholderbg.jpg" id="placeholder" alt="asd">
         <canvas id="canvass" title="Right click -> &quot;Save image as...&quot;"></canvas>
     </div>
 </div>
@@ -85,46 +87,47 @@
 <script src="js/sidebar.js"></script>
 
 <div class="namewriting">
-
+    <span class="textUnderSlides">Name:</span>
     <form id="namewriting">
         <label>
             <textarea id="top-text" placeholder="Name"></textarea>
         </label>
     </form>
-
+    <span class="textUnderSlides">Surname:</span>
     <form id="namewriting1" >
         <label>
             <textarea id="bottom-text" placeholder="Surname"></textarea>
         </label>
     </form>
-
+    <span class="textUnderSlides">Company:</span>
     <form id="namewriting2">
         <label>
         <textarea id="company" placeholder="Company"></textarea>
         </label>
     </form>
-
+    <span class="textUnderSlides">Phone Number:</span>
     <form id="namewriting3">
         <label>
             <textarea id="phone" placeholder="Phone Number"></textarea>
         </label>
     </form>
-
+    <span class="textUnderSlides">Email:</span>
     <form id="namewriting4">
         <label>
             <textarea id="email" placeholder="Email"></textarea>
         </label>
     </form>
-
+    <span class="textUnderSlides">Address:</span>
     <form id="namewriting5">
         <label>
-            <textarea id="address" placeholder="Address"></textarea>
+            <textarea id="address" placeholder="Address" maxlength="45"></textarea>
         </label>
     </form>
 </div>
 
-
+<a id="downloadLnk" download="YourCard.jpg">
 <button class="submitbutton" id="submit1">Save as image file</button>
+</a>
 <br>
 <button class="submitbutton" id="submit2">Share as URL</button>
 <br>
