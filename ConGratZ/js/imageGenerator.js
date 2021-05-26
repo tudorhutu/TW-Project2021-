@@ -1,7 +1,10 @@
 let topTextInput, bottomTextInput, topsize, bottomsize, topcol, bottomcol, image, generateBtn, canvas, ctx, placeholder,
-    customurl, customurlf, saveimage, bgInput, foreground, animation;
+    customurl, customurlf, saveimage, bgInput, foreground, animation,drop1,drop2;
+
 
 function generate(img, topTextInput, bottomTextInput, topsize, bottomsize, topcol, bottomcol) {
+    drop1.style.display="block";
+    drop2.style.display="block";
     let fontsize;
     let str1 = "From: ";
     canvas.width = img.width;
@@ -25,6 +28,8 @@ function generate(img, topTextInput, bottomTextInput, topsize, bottomsize, topco
 }
 
 function init() {
+    drop1=document.getElementById("d1");
+    drop2=document.getElementById("d2");
     topTextInput = document.getElementById('top-text');
     bottomTextInput = document.getElementById('bottom-text');
     topsize = document.getElementById("topsize");
@@ -43,12 +48,16 @@ function init() {
     animation = document.getElementById("animation");
     ctx = canvas.getContext('2d');
 
+
     canvas.width = canvas.height = 0;
+
+    drop1.style.display="none";
+    drop2.style.display="none";
 
     generateBtn.addEventListener('click', function () {
         let img = new Image;
         if (!customurl.value) {
-            img.src = 'https://i.kym-cdn.com/entries/icons/original/000/036/482/cover5.jpg';
+            return;
         } else {
             img.src = customurl.value;
         }
@@ -74,7 +83,7 @@ function loadForeground(img) {
 
 function loadAnimation(img) {
     animation.src = img.src;
-    animation.style.display= "block";
+    animation.style.display = "block";
 }
 
 init();

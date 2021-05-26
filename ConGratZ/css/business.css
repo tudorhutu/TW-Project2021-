@@ -33,6 +33,10 @@ input[type=text]:focus {
     padding-left: 256px;
 }
 
+#downloadLnk{
+    width: 504px;
+}
+
 .submitbutton {
     margin-bottom: 30px;
     margin-left: 256px;
@@ -94,6 +98,11 @@ textarea{
     .card {
         width: 300px;
         margin-left: 50px;
+    }
+    #canvass{
+        margin-bottom: -5px;
+        min-width: 300px;
+        max-width: 300px;
     }
 
     .card img {

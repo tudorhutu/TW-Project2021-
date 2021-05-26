@@ -100,6 +100,7 @@ function loadImage(img) {
 
 function download() {
     var dt = canvas.toDataURL('image/jpg', 1.0);
+    // canvas.toBlob(function(blob){console.log(blob.toString());}, 'image/jpeg', 1.0);
     this.href = dt;
 };
 downloadLnk.addEventListener('click', download, false);

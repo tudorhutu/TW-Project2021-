@@ -18,6 +18,7 @@ input[type=text]:focus {
 .namewriting {
     margin-top: 100px;
     padding-left: 256px;
+    padding-bottom: 100px;
 }
 
 .submitbutton {
@@ -49,53 +50,104 @@ input[type=text]:focus {
 
 
 .card {
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     height: fit-content;
-    border: 13px outset #401451;
 }
 
 .card img {
-    object-fit: fill;
+    /*object-fit: fill;*/
     display: block;
-    width: 1080px;
+    /*width: 1080px;*/
 }
 
-#placeholder{
+#placeholder {
+    border: 13px outset #401451;
+    min-width: 1500px;
+    max-width: 1500px;
     margin-bottom: -19px;
 }
 
-#canvass{
+#canvass {
+    border: 13px outset #401451;
+    z-index: 0;
     margin-bottom: -5px;
-    min-width: 1000px;
-    max-width: 1000px;
+    min-width: 1500px;
+    max-width: 1500px;
 }
 
-#foreground{
-    display: none;
-    margin-top: -500px;
-    position: absolute;
-}
-#animation{
-    display: none;
-    margin-top: -590px;
-    position: absolute;
+#foreground {
+    z-index: 80;
+    margin-top: -766px;
+    width: 396px;
+    min-width: 396px;
+    max-width: 396px;
+    margin-left: 21px;
 }
 
-#custom{display: none}
+#animation {
+    border-radius: 50%;
+    min-width: 243px;
+    max-width: 243px;
+    z-index: 50;
+    margin-top: -326px;
+    padding-bottom: 428px;
+    margin-left: 98px;
+    height: 238px;
+}
+
+#custom {
+    display: none
+}
 
 @media screen and (max-width: 834px) {
-    .logo-img{
+    .logo-img {
         width: 53px;
     }
+
+    #foreground{
+        min-width: 0;
+        margin-top: -444px;
+        width: 121px;
+        margin-left: 24px;
+        padding-bottom: 100px;
+    }
+
+    #animation{
+        min-width: 0;
+        width: 68px;
+        height: 82px;
+        margin-top: -120px;
+        padding-bottom: 338px;
+        margin-left: 47px;
+    }
+
+    #placeholder {
+        min-width: 500px;
+        max-width: 500px;
+        width: 500px;
+    }
+
+    #canvass {
+        min-width: 500px;
+        max-width: 500px;
+        width: 500px;
+    }
+
+    #card {
+        width: 500px;
+    }
+
 
     #wrapper {
         overflow: scroll;
     }
 
     .card {
-        width: 300px;
+        width: 500px;
         margin-left: 50px;
     }
 

@@ -32,27 +32,27 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Backgrounds</button>
         <div id="myDropdown" class="dropdown-content">
-            <a> <img src="resources/placeholder.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder2.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
-            <a> <img src="resources/placeholder3.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/bg1.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/bg2.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
+            <a> <img src="resources/bg3.jpg" class="bgimagein" onclick="loadImage(this)" style="width: 200px" alt="big lion"></a>
         </div>
     </div>
     <br>
     <div class="dropdown">
-        <button onclick="myFunction1()" class="dropbtn">Foregrounds</button>
+        <button onclick="myFunction1()" class="dropbtn" id="d1">Foregrounds</button>
         <div id="myDropdown1" class="dropdown-content">
-            <a> <img src="resources/lines.png" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
-            <a> <img src="resources/placeholdergif.gif" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
+            <a> <img src="resources/heart.png" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
+            <a> <img src="resources/pump.png" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
+            <a> <img src="resources/window.png" style="width: 200px" alt="big lion" onclick="loadForeground(this)"></a>
         </div>
     </div>
     <br>
     <div class="dropdown">
-        <button onclick="myFunction2()" class="dropbtn">Animations</button>
+        <button onclick="myFunction2()" class="dropbtn" id="d2">Animations</button>
         <div id="myDropdown2" class="dropdown-content">
-            <a> <img src="resources/placeholdergif.gif" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
+            <a> <img src="resources/snow.gif" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
+            <a> <img src="resources/fire.gif" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
+            <a> <img src="resources/heart.gif" style="width: 200px" alt="big lion" onclick="loadAnimation(this)"></a>
         </div>
     </div>
     <br>
@@ -87,25 +87,34 @@
     </div>
 
     <div class="card">
-        <img src="resources/placeholder2.jpg" id="placeholder" alt="asd">
+        <img src="resources/placeholderbg.jpg" id="placeholder" alt="asd">
         <canvas id="canvass"></canvas>
-        <img src="" id="animation">
-        <img src=" " id="foreground">
+        <img src="resources/newsletter.gif" id="animation">
+        <img src="resources/placeholderf.png" id="foreground">
     </div>
 </div>
 <script src="js/sidebar.js"></script>
 <div class="namewriting">
 
-    <textarea id="top-text" placeholder="name"></textarea>
-    <textarea id="bottom-text" placeholder="surname"></textarea>
+    <span class="textUnderSlides">Name:</span>
+    <form id="namewriting">
+        <label>
+            <textarea id="top-text" placeholder="Name"></textarea>
+        </label>
+    </form>
+    <span class="textUnderSlides">Surname:</span>
+    <form id="namewriting1" >
+        <label>
+            <textarea id="bottom-text" placeholder="Surname"></textarea>
+        </label>
+    </form>
 
 </div>
-<button class="submitbutton" id="saveimage">Save as image file</button>
-<br>
-<button class="submitbutton" id="submiturl">Share as URL</button>
+
 <p>
     <button class="submitbutton" id="generate"><span id="generatetext">Generate!</span></button>
 </p>
+<button class="submitbutton" id="submiturl">Share as URL</button>
 
 <script src="js/imageGenerator.js"></script>
 </body>
