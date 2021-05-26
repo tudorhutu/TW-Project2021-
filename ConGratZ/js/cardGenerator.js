@@ -37,14 +37,14 @@ function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, p
     ctx.fillStyle = topcol;
     ctx.textAlign = 'right';
 
-    ctx.fillText(addressIn, canvas.width / 2 + canvas.width / 3 + 30, 180, canvas.width);
-    ctx.strokeText(addressIn, canvas.width / 2 + canvas.width / 3 + 30, 180, canvas.width);
+    ctx.fillText(addressIn, canvas.width-120 , 180, canvas.width);
+    ctx.strokeText(addressIn, canvas.width -120, 180, canvas.width);
 
-    ctx.fillText(phoneIn, canvas.width / 2 + canvas.width / 3 + 30, 300, canvas.width);
-    ctx.strokeText(phoneIn, canvas.width / 2 + canvas.width / 3 + 30, 300, canvas.width);
+    ctx.fillText(phoneIn, canvas.width-120 , 300, canvas.width);
+    ctx.strokeText(phoneIn, canvas.width -120, 300, canvas.width);
 
-    ctx.fillText(emailIn, canvas.width / 2 + canvas.width / 3 + 30, 430, canvas.width);
-    ctx.strokeText(emailIn, canvas.width / 2 + canvas.width / 3 + 30, 430, canvas.width);
+    ctx.fillText(emailIn, canvas.width-120 , 430, canvas.width);
+    ctx.strokeText(emailIn, canvas.width -120, 430, canvas.width);
 }
 
 function init() {

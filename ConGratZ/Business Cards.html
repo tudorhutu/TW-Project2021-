@@ -33,7 +33,7 @@
         <button onclick="myFunction()" class="dropbtn">Backgrounds</button>
         <div id="myDropdown" class="dropdown-content">
             <a> <img src="resources/placeholder.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
-            <a> <img src="resources/placeholder.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
+            <a> <img src="resources/asda.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
             <a> <img src="resources/placeholder3.jpg" style="width: 200px" onclick="loadImage(this)" alt="big lion"></a>
         </div>
     </div>
@@ -49,22 +49,15 @@
     </div>
 
     <br>
-    <div class="dropdown">
-        <button onclick="myFunction2()" class="dropbtn">Font</button>
-        <div id="myDropdown2" class="dropdown-content">
-            <a> Comic Sans</a>
-            <a> Arial</a>
-            <a> Hobo STD</a>
-            <a> ...</a>
-        </div>
-    </div>
 
     <br>
     <div class="dropdown">
         <button onclick="myFunction3()" class="dropbtn">Font Size</button>
         <div id="myDropdown3" class="dropdown-content">
-            <a> <input type="range" id="topsize" min="0.10" max="0.25" value="0.15" step="0.01"></a>
-            <a> <input type="range" id="rightsize" min="0.10" max="0.25" value="0.15" step="0.01"></a>
+            <a id="noninteract"> Left-side text size: </a>
+            <a> <input type="range" id="topsize" min="0.10" max="0.15" value="0.15" step="0.01"></a>
+            <a > Right-side text size: </a>
+            <a> <input type="range" id="rightsize" min="0.10" max="0.15" value="0.15" step="0.01"></a>
         </div>
     </div>
 
@@ -78,9 +71,6 @@
     </div>
 
     <br>
-    <div class="dropdown">
-        <button class="dropbtn">Logo Upload</button>
-    </div>
     <textarea id="custom" placeholder="custom url"></textarea>
 </div>
 
