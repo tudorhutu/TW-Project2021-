@@ -131,13 +131,14 @@ window.onload = function () {
         // document.getElementById("displaytext").innerHTML = canvas.toDataURL('image/jpeg', 1.0);
         var canvas=document.getElementById("canvass");
         var dataUrl=canvas.toDataURL();
-        $.ajax({
-            type: "POST",
-            url: "http://localhost/scripts/saveCanvasDataUrl.php",
-            data: {image: dataUrl}
-        })
-            .done(function(respond){console.log("done: "+respond);})
-            .fail(function(respond){console.log("fail");})
-            .always(function(respond){console.log("always");})
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/scripts/saveCanvasDataUrl.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        xhr.onload = function(){
+            console.log(this.responseText);
+        }
+
+        xhr.send(dataUrl);
     })
 }
