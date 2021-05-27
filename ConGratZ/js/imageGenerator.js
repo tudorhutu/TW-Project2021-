@@ -1,6 +1,6 @@
 let topTextInput, bottomTextInput, topsize, bottomsize, bottomcol, image, generateBtn, canvas, ctx, placeholder,
-    customurl, customurlf, saveimage, bgInput, foreground, animation, drop1, drop2;
-
+    customurl, customurlf, saveimage, bgInput, foreground, animation, drop1, drop2,submiturl;
+let linktext;
 
 function generate(img, topTextInput, bottomTextInput, topsize, bottomsize, bottomcol) {
     drop1.style.display = "block";
@@ -46,6 +46,8 @@ function init() {
     foreground = document.getElementById("foreground");
     animation = document.getElementById("animation");
     ctx = canvas.getContext('2d');
+    submiturl= document.getElementById('submiturl');
+
 
 
     canvas.width = canvas.height = 0;
@@ -68,6 +70,13 @@ function init() {
         }
 
     });
+    
+    submiturl.addEventListener("click", function () {
+
+        document.getElementById('customlink').style.display='block';
+        linktext=document.getElementById("displaytext").innerHTML=document.getElementById("linktext").href+'?foregrundid='+foreground.src+'&animid='+animation.src;
+        // document.getElementById('customlink').innerHTML="<a href=\"display.html\" onclick=\"location.href=this.href+'?foregrundid='+foreground.src+'&animid='+animation.src;return false;\">Link</a>";
+    })
 
 }
 

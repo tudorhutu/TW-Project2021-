@@ -1,5 +1,5 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, downloadLnk;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl;
 
 function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
@@ -67,8 +67,8 @@ function init() {
     addressIn = document.getElementById("address");
     phoneIn = document.getElementById("phone");
     emailIn = document.getElementById("email");
-    downloadLnk =document.getElementById("downloadLnk");
-
+    downloadLnk = document.getElementById("downloadLnk");
+    submiturl = document.getElementById('submiturl');
     ctx = canvas.getContext('2d');
 
     canvas.width = canvas.height = 0;
@@ -89,6 +89,7 @@ function init() {
         }
 
     });
+
 }
 
 
@@ -104,3 +105,39 @@ function download() {
     this.href = dt;
 };
 downloadLnk.addEventListener('click', download, false);
+
+
+window.onload = function () {
+    submiturl.addEventListener("click", function () {
+
+        document.getElementById('customlink').style.display = 'block';
+        linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + foreground.src + '&animid=' + animation.src;
+    })
+    submiturl.addEventListener("click", function () {
+        // e.preventDefault();
+        //
+        // var canvas = document.getElementById('canvass').value;
+        //
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('POST', 'process.php', true);
+        // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        //
+        // xhr.onload = function () {
+        //     console.log(this.responseText);
+        // }
+        //
+        // xhr.send(canvas);
+        // console.log(canvas.value);
+        // document.getElementById("displaytext").innerHTML = canvas.toDataURL('image/jpeg', 1.0);
+        var canvas=document.getElementById("canvass");
+        var dataUrl=canvas.toDataURL();
+        $.ajax({
+            type: "POST",
+            url: "http://localhost/scripts/saveCanvasDataUrl.php",
+            data: {image: dataUrl}
+        })
+            .done(function(respond){console.log("done: "+respond);})
+            .fail(function(respond){console.log("fail");})
+            .always(function(respond){console.log("always");})
+    })
+}

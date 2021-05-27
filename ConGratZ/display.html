@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/customGreet.css">
+</head>
+<body>
+<script>
+
+    window.onload = function () {
+        const queryString = window.location.search;
+        console.log(queryString);
+        const urlParams = new URLSearchParams(queryString);
+        const display = urlParams.get('foregrundid');
+        const display2 = urlParams.get('animid');
+        document.getElementById('numar').innerHTML =
+            "<div class=\"card\">"+
+            "<img src='resources/placeholderbg.jpg' id='placeholder' alt='asd'>"+
+            "<img id='foreground' src=" + display + "> " +
+            "<img id='animation' src=" + display2 + ">" +
+            "</div>";
+
+    }
+</script>
+<div id="numar">
+</div>
+</body>
+</html>

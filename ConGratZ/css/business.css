@@ -37,6 +37,12 @@ input[type=text]:focus {
     width: 504px;
 }
 
+#customlink {
+    display: none;
+    margin-left: 270px;
+    padding-bottom: 100px;
+}
+
 .submitbutton {
     margin-bottom: 30px;
     margin-left: 256px;

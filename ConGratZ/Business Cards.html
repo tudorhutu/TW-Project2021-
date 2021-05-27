@@ -129,7 +129,11 @@
 <button class="submitbutton" id="submit1">Save as image file</button>
 </a>
 <br>
-<button class="submitbutton" id="submit2">Share as URL</button>
+<button class="submitbutton" id="submiturl">Share as URL</button>
+<div id="customlink">
+ <a id="linktext" href="display.html" onclick="location.href=this.href+'?foregrundid='+foreground.src+'&animid='+animation.src;return false;"><div id="displaytext"></div></a>
+
+</div>
 <br>
 <button class="submitbutton" id="generate">Generate!</button>
 
