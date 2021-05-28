@@ -80,10 +80,7 @@ input[type=text]:focus {
 #placeholder{
     margin-bottom: -19px;
 }
-
-#bttn{
-display: none;
-}
+#bttn{display: none;}
 
 #custom{display: none;}
 
