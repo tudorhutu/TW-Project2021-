@@ -117,7 +117,8 @@
 <input class="submitbutton" type='button' id='bttn'  value='Share as URL' />
 <button class="submitbutton" id="submitwait">Please wait</button>
 <div id="customlink">
-    <a id="linktext" ><div id="displaytext"></div></a>
+    <a id="linktext" href="display.html" onclick="location.href=this.href+'?foregrundid='+foreground.src+'&animid='+animation.src;return false;"></a>
+    <a id="linktext2"><div id="displaytext"></div></a>
 </div>
 <script src="js/imageGenerator.js"></script>
 </body>

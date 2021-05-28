@@ -74,7 +74,6 @@ function init() {
     });
 
 
-
 }
 
 function loadImage(img) {
@@ -117,21 +116,23 @@ document.addEventListener('DOMContentLoaded', function (e) {
             var newlink = (' ' + r.toString()).slice(1);
 
             newlink = newlink.replace("F:/xampp/htdocs/ConGratZ", 'http://79.112.52.162');
-            console.log(newlink);
-            document.getElementById('customlink').style.display = 'block';
-            document.getElementById("linktext").href = newlink;
-            document.getElementById("displaytext").innerHTML = newlink;
+            // console.log(newlink);
+            // document.getElementById('customlink').style.display = 'block';
+            // document.getElementById("linktext").href = newlink;
+            // document.getElementById("displaytext").innerHTML = newlink;
 
             ///////////////////////////////////////
+            var fullpath = 'http://localhost:63342/ConGratZ/display.html'
+            var forepath = foreground.src;
+            var animpath = animation.src;
+            forepath = forepath.replace('http://79.112.52.162', '');
+            animpath = animpath.replace('http://79.112.52.162', '');
+            fullpath = fullpath + "?foregrundid=" + forepath + '&animid=' + animpath + '&bgid='+ newlink;
 
-            // var forepath = foreground.src;
-            // var animpath = animation.src;
-            // forepath = forepath.replace('http://79.112.52.162', '');
-            // animpath = animpath.replace('http://79.112.52.162', '');
-            //
-            // document.getElementById('customlink').style.display = 'block';
-            // linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + forepath + '&animid=' + animpath;
-            // document.getElementById("linktext2").href = linktext;
+            document.getElementById('customlink').style.display = 'block';
+           // linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + forepath + '&animid=' + animpath;
+            document.getElementById("linktext2").href = fullpath;
+            document.getElementById("linktext2").innerHTML = fullpath;
 
             ///////////////////////////////////////
         }
