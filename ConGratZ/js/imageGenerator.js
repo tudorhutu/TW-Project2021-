@@ -1,5 +1,5 @@
 let topTextInput, bottomTextInput, topsize, bottomsize, bottomcol, image, generateBtn, canvas, ctx, placeholder,
-    customurl, customurlf, saveimage, bgInput, foreground, animation, drop1, drop2,submiturl;
+    customurl, customurlf, saveimage, bgInput, foreground, animation, drop1, drop2, submiturl;
 let linktext;
 
 function generate(img, topTextInput, bottomTextInput, topsize, bottomsize, bottomcol) {
@@ -46,8 +46,7 @@ function init() {
     foreground = document.getElementById("foreground");
     animation = document.getElementById("animation");
     ctx = canvas.getContext('2d');
-    submiturl= document.getElementById('submiturl');
-
+    submiturl = document.getElementById('submiturl');
 
 
     canvas.width = canvas.height = 0;
@@ -70,11 +69,18 @@ function init() {
         }
 
     });
-    
-    submiturl.addEventListener("click", function () {
 
-        document.getElementById('customlink').style.display='block';
-        linktext=document.getElementById("displaytext").innerHTML=document.getElementById("linktext").href+'?foregrundid='+foreground.src+'&animid='+animation.src;
+    submiturl.addEventListener("click", function () {
+        var forepath = foreground.src;
+        var animpath = animation.src;
+        forepath = forepath.replace('http://79.112.52.162', '');
+        animpath =animpath.replace('http://79.112.52.162', '');
+        // forepath = forepath.replace('http://localhost:63342', '');
+        // animpath = animpath.replace('http://localhost:63342', '');
+
+        document.getElementById('customlink').style.display = 'block';
+        linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + forepath + '&animid=' + animpath;
+        document.getElementById("linktext2").href=linktext;
         // document.getElementById('customlink').innerHTML="<a href=\"display.html\" onclick=\"location.href=this.href+'?foregrundid='+foreground.src+'&animid='+animation.src;return false;\">Link</a>";
     })
 

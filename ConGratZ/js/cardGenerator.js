@@ -1,5 +1,5 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl,linktext;
 
 function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
@@ -115,27 +115,6 @@ window.onload = function () {
         document.getElementById('customlink').style.display = 'block';
         linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + foreground.src + '&animid=' + animation.src;
     })
-
-
-    // submiturl.addEventListener("click", function () {
-    //     canvas.toBlob(function (blob) {
-    //         var newImg = document.createElement('img'),
-    //             url = URL.createObjectURL(blob);
-    //         console.log(newImg.decode());
-    //     });
-    //     var dataUrl = canvas.toDataURL();
-    //     // console.log(dataUrl);
-    //     var xhr = new XMLHttpRequest();
-    //     xhr.open('POST', '/scripts/saveCanvasDataUrl.php', true);
-    //     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    //
-    //     xhr.onload = function () {
-    //         console.log(this.responseText);
-    //     }
-    //
-    //
-    //     xhr.send(dataUrl);
-    // })
 
 }
 
