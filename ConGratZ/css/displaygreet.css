@@ -1,0 +1,42 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 160px;
+    height: fit-content;
+}
+
+
+.card img {
+    /*object-fit: fill;*/
+    display: block;
+    /*width: 1080px;*/
+}
+
+#canvass {
+    border: 13px outset #401451;
+    z-index: 0;
+    margin-bottom: -5px;
+    min-width: 1500px;
+    max-width: 1500px;
+}
+
+#foreground {
+    z-index: 80;
+    margin-top: -417px;
+    width: 396px;
+    min-width: 396px;
+    max-width: 396px;
+    margin-left: 21px;
+}
+
+#animation {
+    border-radius: 50%;
+    min-width: 243px;
+    max-width: 243px;
+    z-index: 50;
+    margin-top: -295px;
+    padding-bottom: 440px;
+    margin-left: 98px;
+    height: 238px;
+}
