@@ -12,7 +12,7 @@ if( $_SERVER['REQUEST_METHOD']=='POST' && isset( $_POST['image'],$_POST['filenam
 
     header('HTTP/1.1 200 OK',true,200);
     header('Content-Type: text/plain');
-    exit( $result ? sprintf( 'File uploaded & saved as %s', $target ) : sprintf( 'Unable to save %s',$filename ) );
+    exit( $result ? sprintf( $target ) : sprintf( 'Unable to save %s',$filename ) );
 }
 ?>
 

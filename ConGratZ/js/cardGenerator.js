@@ -164,6 +164,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
         var callback = function (r) {
              alert(r);
             linktext = r;
+            console.log(linktext);
+            document.getElementById("linktext").href=linktext;
+            document.getElementById("displaytext").innerHTML=linktext;
         }
 
         ajax.call(this, 'scripts/upload.php', fd, callback);
@@ -171,9 +174,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 
     document.getElementById('bttn').addEventListener('click', bindEvents);
-    document.getElementById('bttn').addEventListener("click", function () {
-            console.log(linktext);
-    });
 
 });
 
