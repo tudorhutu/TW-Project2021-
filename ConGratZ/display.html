@@ -14,9 +14,10 @@
         const urlParams = new URLSearchParams(queryString);
         const display = urlParams.get('foregrundid');
         const display2 = urlParams.get('animid');
+        const display3 = urlParams.get('bgid');
         document.getElementById('numar').innerHTML =
             "<div class=\"card\">"+
-            "<img src='resources/placeholderbg.jpg' id='placeholder' alt='asd'>"+
+            "<img src="+ display3 +" id='canvass' alt='asd'>"+
             "<img id='foreground' src=" + display + "> " +
             "<img id='animation' src=" + display2 + ">" +
             "</div>";
