@@ -5,7 +5,7 @@ if( $_SERVER['REQUEST_METHOD']=='POST' && isset( $_POST['image'],$_POST['filenam
     $filename=$_POST['filename'];
 
     /* edit to suit own environment */
-    $savepath='F:/xampp/htdocs/ConGratZ/scripts/';
+    $savepath='F:/xampp/htdocs/ConGratZ/resources/generated/';
 
     $target=$savepath . $filename;
     $result=file_put_contents( $target, base64_decode( $image ) );
