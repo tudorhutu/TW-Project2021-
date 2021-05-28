@@ -1,6 +1,6 @@
 .card {
     margin-top: 50px;
-    margin-left: auto;
+    margin-left: 100px;
     margin-right: auto;
     height: fit-content;
     border: 13px outset #401451;
@@ -29,11 +29,11 @@ input[type=text]:focus {
 }
 
 .namewriting {
-    margin-right: 500px;
+    margin-right: 1150px;
     background-color: white;
     margin-top: 100px;
-    margin-left: 226px;
-    padding-left: 30px;
+    margin-left: 250px;
+    padding: 30px;
 }
 
 #downloadLnk {
@@ -96,7 +96,7 @@ input[type=text]:focus {
 
 textarea {
     resize: none;
-    width: 30%;
+    width: 400px;
 }
 
 #downloadLnk {
