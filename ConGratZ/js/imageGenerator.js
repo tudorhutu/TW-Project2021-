@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
             // document.getElementById("displaytext").innerHTML = newlink;
 
             ///////////////////////////////////////
-            var fullpath = 'http://79.112.52.162/ConGratZ/display.html'
+            var fullpath = 'http://79.112.52.162/display.html'
             var forepath = foreground.src;
             var animpath = animation.src;
             forepath = forepath.replace('http://79.112.52.162', '');
