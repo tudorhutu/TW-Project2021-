@@ -50,6 +50,8 @@ function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, p
 
     ctx.fillText(emailIn, canvas.width - 120, 430, canvas.width);
     // ctx.strokeText(emailIn, canvas.width - 120, 430, canvas.width);
+
+
 }
 
 function init() {
@@ -113,32 +115,83 @@ window.onload = function () {
         document.getElementById('customlink').style.display = 'block';
         linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + foreground.src + '&animid=' + animation.src;
     })
-    submiturl.addEventListener("click", function () {
-        // e.preventDefault();
-        //
-        // var canvas = document.getElementById('canvass').value;
-        //
-        // var xhr = new XMLHttpRequest();
-        // xhr.open('POST', 'process.php', true);
-        // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        //
-        // xhr.onload = function () {
-        //     console.log(this.responseText);
-        // }
-        //
-        // xhr.send(canvas);
-        // console.log(canvas.value);
-        // document.getElementById("displaytext").innerHTML = canvas.toDataURL('image/jpeg', 1.0);
-        var canvas=document.getElementById("canvass");
-        var dataUrl=canvas.toDataURL();
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/scripts/saveCanvasDataUrl.php', true);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
-        xhr.onload = function(){
-            console.log(this.responseText);
+
+    // submiturl.addEventListener("click", function () {
+    //     canvas.toBlob(function (blob) {
+    //         var newImg = document.createElement('img'),
+    //             url = URL.createObjectURL(blob);
+    //         console.log(newImg.decode());
+    //     });
+    //     var dataUrl = canvas.toDataURL();
+    //     // console.log(dataUrl);
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open('POST', '/scripts/saveCanvasDataUrl.php', true);
+    //     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    //
+    //     xhr.onload = function () {
+    //         console.log(this.responseText);
+    //     }
+    //
+    //
+    //     xhr.send(dataUrl);
+    // })
+
+}
+
+////////////////////send canvas
+
+
+    document.addEventListener('DOMContentLoaded',function(e){
+        /*
+            generate a canvas with some sort of image -
+            in this example a promo picture from the classic
+            B-Horror film "The Blob"
+        */
+        // var canvas=document.getElementById('canvas');
+        // var ctx=canvas.getContext('2d');
+        // var img=new Image();
+        // img.src='../resources/placeholder.png';
+        // img.onload=function(){
+        //     canvas.width=img.width;
+        //     canvas.height=img.height;
+        //     ctx.drawImage( img, 0, 0, canvas.width, canvas.height );
+        // }
+
+
+        /*
+            Button click event handler
+            create FormData Object and read the canvas data
+            then send via ajax to a PHP script ( in this case the same page )
+            to process the uploaded image.
+        */
+        function bindEvents(event){
+
+            var fd=new FormData();
+            fd.append('action','save');
+            fd.append('image', canvas.toDataURL('image/jpg').replace( /^data:image\/(png|jpg);base64,/, '' ) );
+            fd.append('filename','testt' )
+
+            var ajax=function(url,data,callback){
+                var xhr=new XMLHttpRequest();
+                xhr.onreadystatechange=function(){
+                    if( this.readyState===4 && this.status===200 )callback.call( this, this.response );
+                };
+                xhr.open( 'POST', url, true );
+                console.log(data);
+                xhr.send( data );
+            };
+
+            var callback=function(r){
+                alert(r)
+            }
+
+            ajax.call( this, 'scripts/upload.php', fd, callback );
         }
 
-        xhr.send(dataUrl);
-    })
-}
+
+        document.getElementById('bttn').addEventListener( 'click', bindEvents );
+
+    });
+
+
