@@ -1,5 +1,5 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl,linktext;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext;
 
 function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
@@ -121,56 +121,60 @@ window.onload = function () {
 ////////////////////send canvas
 
 
-    document.addEventListener('DOMContentLoaded',function(e){
-        /*
-            generate a canvas with some sort of image -
-            in this example a promo picture from the classic
-            B-Horror film "The Blob"
-        */
-        // var canvas=document.getElementById('canvas');
-        // var ctx=canvas.getContext('2d');
-        // var img=new Image();
-        // img.src='../resources/placeholder.png';
-        // img.onload=function(){
-        //     canvas.width=img.width;
-        //     canvas.height=img.height;
-        //     ctx.drawImage( img, 0, 0, canvas.width, canvas.height );
-        // }
+document.addEventListener('DOMContentLoaded', function (e) {
+    /*
+        generate a canvas with some sort of image -
+        in this example a promo picture from the classic
+        B-Horror film "The Blob"
+    */
+    // var canvas=document.getElementById('canvas');
+    // var ctx=canvas.getContext('2d');
+    // var img=new Image();
+    // img.src='../resources/placeholder.png';
+    // img.onload=function(){
+    //     canvas.width=img.width;
+    //     canvas.height=img.height;
+    //     ctx.drawImage( img, 0, 0, canvas.width, canvas.height );
+    // }
 
 
-        /*
-            Button click event handler
-            create FormData Object and read the canvas data
-            then send via ajax to a PHP script ( in this case the same page )
-            to process the uploaded image.
-        */
-        function bindEvents(event){
+    /*
+        Button click event handler
+        create FormData Object and read the canvas data
+        then send via ajax to a PHP script ( in this case the same page )
+        to process the uploaded image.
+    */
+    function bindEvents(event) {
 
-            var fd=new FormData();
-            fd.append('action','save');
-            fd.append('image', canvas.toDataURL('image/jpg').replace( /^data:image\/(png|jpg);base64,/, '' ) );
-            fd.append('filename',Math.random()+'.jpg' )
+        var fd = new FormData();
+        fd.append('action', 'save');
+        fd.append('image', canvas.toDataURL('image/jpg').replace(/^data:image\/(png|jpg);base64,/, ''));
+        fd.append('filename', Math.random() + '.jpg')
 
-            var ajax=function(url,data,callback){
-                var xhr=new XMLHttpRequest();
-                xhr.onreadystatechange=function(){
-                    if( this.readyState===4 && this.status===200 )callback.call( this, this.response );
-                };
-                xhr.open( 'POST', url, true );
-                console.log(data);
-                xhr.send( data );
+        var ajax = function (url, data, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) callback.call(this, this.response);
             };
+            xhr.open('POST', url, true);
+            console.log(data);
+            xhr.send(data);
+        };
 
-            var callback=function(r){
-                alert(r)
-            }
-
-            ajax.call( this, 'scripts/upload.php', fd, callback );
+        var callback = function (r) {
+            // alert(r);
+            linktext = r;
         }
 
+        ajax.call(this, 'scripts/upload.php', fd, callback);
+    }
 
-        document.getElementById('bttn').addEventListener( 'click', bindEvents );
 
+    document.getElementById('bttn').addEventListener('click', bindEvents);
+    document.getElementById('bttn').addEventListener("click", function () {
+            console.log(linktext);
     });
+
+});
 
 

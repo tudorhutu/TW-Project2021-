@@ -81,6 +81,8 @@ function init() {
         document.getElementById('customlink').style.display = 'block';
         linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + forepath + '&animid=' + animpath;
         document.getElementById("linktext2").href=linktext;
+
+
         // document.getElementById('customlink').innerHTML="<a href=\"display.html\" onclick=\"location.href=this.href+'?foregrundid='+foreground.src+'&animid='+animation.src;return false;\">Link</a>";
     })
 
