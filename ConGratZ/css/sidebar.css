@@ -128,8 +128,8 @@ input[type="color"]:hover {
     cursor: pointer;
 }
 
-#noninteract:hover {
-    cursor: auto;
+.noninteract:hover {
+    cursor: default;
     background-color: #3e3e3e;
     color: #a4a0a0;
 }
