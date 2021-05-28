@@ -164,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
         var callback = function (r) {
              alert(r);
             linktext = r;
+            linktext.replace('F:/xampp/htdocs/ConGratZ', 'http://79.112.52.162');
             console.log(linktext);
             document.getElementById("linktext").href=linktext;
             document.getElementById("displaytext").innerHTML=linktext;
