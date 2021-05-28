@@ -178,11 +178,13 @@ body {
 }
 
 .grid-container {
+    margin-top: -344px;
     display: grid;
     grid-template-columns: auto auto auto;
     left: 50px;
     right: 50px;
     overflow: hidden;
+    background-image: url("../resources/webbg.jpg");
 }
 
 .grid-item {
