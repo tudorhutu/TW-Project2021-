@@ -144,7 +144,7 @@ input[type="color"]:hover {
 .arrow {
     border-left: 70px solid transparent;
     border-right: 70px solid transparent;
-    border-top: 100px solid #cdcadb;
+    border-top: 100px solid #9081a9;
     border-radius: 100%;
     display: inline-block;
     filter: drop-shadow(10px 10px 5px rgba(71, 119, 181, 0.5));
@@ -153,6 +153,7 @@ input[type="color"]:hover {
 }
 
 .right {
+
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
 }

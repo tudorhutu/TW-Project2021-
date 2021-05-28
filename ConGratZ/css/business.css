@@ -1,7 +1,7 @@
 .card {
     margin-top: 50px;
     margin-left: auto;
-    margin-right:auto ;
+    margin-right: auto;
     height: fit-content;
     border: 13px outset #401451;
 }
@@ -9,7 +9,7 @@
 .card img {
     display: block;
     width: 1008px;
-    height:579px;
+    height: 579px;
 }
 
 input[type=text] {
@@ -29,11 +29,14 @@ input[type=text]:focus {
 }
 
 .namewriting {
+    margin-right: 500px;
+    background-color: white;
     margin-top: 100px;
-    padding-left: 256px;
+    margin-left: 226px;
+    padding-left: 30px;
 }
 
-#downloadLnk{
+#downloadLnk {
     width: 504px;
 }
 
@@ -71,43 +74,58 @@ input[type=text]:focus {
 }
 
 
-#canvass{
+#canvass {
     margin-bottom: -5px;
     min-width: 1000px;
     max-width: 1000px;
 }
 
-#placeholder{
+#placeholder {
+    min-width: 1000px;
+    max-width: 1000px;
     margin-bottom: -19px;
 }
-#bttn{display: none;}
 
-#custom{display: none;}
+#bttn {
+    display: none;
+}
 
-textarea{
+#custom {
+    display: none;
+}
+
+textarea {
     resize: none;
     width: 30%;
 }
 
-#downloadLnk{
+#downloadLnk {
     display: none;
 }
 
 
 @media screen and (max-width: 834px) {
 
-    #wrapper{
+    #wrapper {
         overflow: scroll;
     }
-.logo-img{
-    width: 53px;
-}
+
+    .logo-img {
+        width: 53px;
+    }
+
     .card {
         width: 300px;
         margin-left: 50px;
     }
-    #canvass{
+
+    #canvass {
         margin-bottom: -5px;
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    #placeholder{
         min-width: 300px;
         max-width: 300px;
     }
@@ -125,6 +143,7 @@ textarea{
     }
 
     .namewriting {
+        margin-right: 0;
         margin-left: 20px;
         padding-left: 20px;
     }
