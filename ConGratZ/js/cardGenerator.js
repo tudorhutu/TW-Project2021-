@@ -162,12 +162,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
         };
 
         var callback = function (r) {
+            let newlink;
             alert(r);
-            linktext = r.toString();
-            linktext.replace("F:/xampp/htdocs/ConGratZ", '');
-            console.log(linktext);
-            document.getElementById("linktext").href = linktext;
-            document.getElementById("displaytext").innerHTML = linktext;
+            newlink = r.toString();
+            newlink.replace("F:/xampp/htdocs/ConGratZ", 'http://79.112.52.162');
+            console.log(newlink);
+            document.getElementById("linktext").href = newlink;
+            document.getElementById("displaytext").innerHTML = newlink;
         }
 
         ajax.call(this, 'scripts/upload.php', fd, callback);
