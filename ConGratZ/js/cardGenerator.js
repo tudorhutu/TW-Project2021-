@@ -170,7 +170,7 @@ window.onload = function () {
             var fd=new FormData();
             fd.append('action','save');
             fd.append('image', canvas.toDataURL('image/jpg').replace( /^data:image\/(png|jpg);base64,/, '' ) );
-            fd.append('filename','testt.jpg' )
+            fd.append('filename',Math.random()+'.jpg' )
 
             var ajax=function(url,data,callback){
                 var xhr=new XMLHttpRequest();
