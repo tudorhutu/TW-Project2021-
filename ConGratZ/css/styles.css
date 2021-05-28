@@ -1,5 +1,6 @@
 
 body {
+    background-image: url("../resources/webbg.jpg");
     margin: 0;
 }
 
@@ -152,6 +153,7 @@ body {
 }
 
 .ourtitle {
+
     position: relative;
     font-size: 200px;
     bottom: 290px;

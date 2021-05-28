@@ -16,6 +16,7 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
+    background-color: white;
     max-width: 1920px;
     max-height: 500px;
     position: relative;
