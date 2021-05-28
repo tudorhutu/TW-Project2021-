@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="icon" href=
+            "resources/asdlogo%20-%20Copy.ico"
+          type="image/x-icon">
     <link rel="stylesheet" href="css/displaygreet.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<div id="loader"></div>
+
+
+<div id="numar" style="display:none;" class="animate-bottom">
+    <h2>Tada!</h2>
+    <p>Some text in my newly loaded page..</p>
+</div>
+
 <script>
 
+
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("numar").style.display = "block";
+    }
+
+
     window.onload = function () {
+        setTimeout(showPage,5000);
         const queryString = window.location.search;
         console.log(queryString);
         const urlParams = new URLSearchParams(queryString);
@@ -17,20 +37,18 @@
         const display2 = urlParams.get('animid');
         const display3 = urlParams.get('bgid');
         document.getElementById('numar').innerHTML =
-            "<div class=\"card\">"+
-            "<img src="+ display3 +" id='canvass' alt='asd'>"+
-            "<img id='foreground' src=" + display + "> " +
-            "<img id='animation' src=" + display2 + ">" +
-            "</div>";
             // "<div class=\"card\">"+
-            // "<img src='resources/bg2.jpg' id='canvass' alt='asd'>"+
-            // "<img id='foreground' src='resources/window.png'> " +
-            // "<img id='animation' src='resources/snow.gif'>" +
+            // "<img src="+ display3 +" id='canvass' alt='asd'>"+
+            // "<img id='foreground' src=" + display + "> " +
+            // "<img id='animation' src=" + display2 + ">" +
             // "</div>";
+        "<div class=\"card\">"+
+        "<img src='resources/bg2.jpg' id='canvass' alt='asd'>"+
+        "<img id='foreground' src='resources/window.png'> " +
+        "<img id='animation' src='resources/snow.gif'>" +
+        "</div>";
 
     }
 </script>
-<div id="numar">
-</div>
 </body>
 </html>
