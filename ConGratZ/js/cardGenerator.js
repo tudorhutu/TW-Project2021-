@@ -162,10 +162,12 @@ document.addEventListener('DOMContentLoaded', function (e) {
         };
 
         var callback = function (r) {
-            let newlink;
-            alert(r);
-            newlink = r.toString();
+            var newlink=(' '+r.toString()).slice(1);
+
+            newlink = r.toString().slice();
             newlink.replace("F:/xampp/htdocs/ConGratZ", 'http://79.112.52.162');
+            // newlink =newlink.replace("<?php","alshfjaskhfjkas");
+            // alert(r);
             console.log(newlink);
             document.getElementById("linktext").href = newlink;
             document.getElementById("displaytext").innerHTML = newlink;
