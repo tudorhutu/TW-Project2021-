@@ -177,7 +177,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
         ajax.call(this, 'scripts/upload.php', fd, callback);
         bttn.style.display ='none';
+        document.getElementById("submitwait").style.display='block';
         setTimeout(function () {
+            document.getElementById("submitwait").style.display='none';
             bttn.style.display = 'block';
         }, 5000);
     }
