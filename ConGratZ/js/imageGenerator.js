@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
         var callback = function (r) {
             var newlink = (' ' + r.toString()).slice(1);
 
-            newlink = newlink.replace("F:/xampp/htdocs/ConGratZ", 'http://79.112.52.162');
+            newlink = newlink.replace("F:/xampp/htdocs/ConGratZ", '');
             // console.log(newlink);
             // document.getElementById('customlink').style.display = 'block';
             // document.getElementById("linktext").href = newlink;
