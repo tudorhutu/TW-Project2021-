@@ -1,5 +1,5 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn,idlebtn;
 
 function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
@@ -73,7 +73,7 @@ function init() {
     submiturl = document.getElementById('submiturl');
     bttn = document.getElementById("bttn");
     ctx = canvas.getContext('2d');
-
+idlebtn=document.getElementById('submitwait');
     canvas.width = canvas.height = 0;
 
     generateBtn.addEventListener('click', function () {
@@ -177,9 +177,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
         ajax.call(this, 'scripts/upload.php', fd, callback);
         bttn.style.display ='none';
-        document.getElementById("submitwait").style.display='block';
+        idlebtn.style.display='block';
         setTimeout(function () {
-            document.getElementById("submitwait").style.display='none';
+            idlebtn.style.display='none';
             bttn.style.display = 'block';
         }, 5000);
     }
