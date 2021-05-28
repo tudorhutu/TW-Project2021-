@@ -50,6 +50,9 @@ input[type=text]:focus {
     transition: all 0.1s;
 }
 
+#bttn {
+    display: none;
+}
 
 .card {
     display: flex;
@@ -64,6 +67,25 @@ input[type=text]:focus {
     /*object-fit: fill;*/
     display: block;
     /*width: 1080px;*/
+}
+
+
+#submitwait{
+    display: none;
+    color: #7a7a7a;
+}
+
+#submitwait:hover{
+    cursor: default;
+    color: #7a7a7a;
+    background: linear-gradient(90deg, rgb(185, 182, 229) 0%, rgba(121, 191, 255, 1) 100%);
+}
+
+#submitwait:active{
+    background: linear-gradient(90deg, rgb(185, 182, 229) 0%, rgba(121, 191, 255, 1) 100%);
+    box-shadow: 0 9px #999;
+    transform: translateY(0px);
+    transition: all 0.0s;
 }
 
 #placeholder {

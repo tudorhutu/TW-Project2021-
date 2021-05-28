@@ -1,5 +1,5 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn,idlebtn;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn, idlebtn;
 
 function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
@@ -73,7 +73,7 @@ function init() {
     submiturl = document.getElementById('submiturl');
     bttn = document.getElementById("bttn");
     ctx = canvas.getContext('2d');
-idlebtn=document.getElementById('submitwait');
+    idlebtn = document.getElementById('submitwait');
     canvas.width = canvas.height = 0;
 
     generateBtn.addEventListener('click', function () {
@@ -124,28 +124,7 @@ window.onload = function () {
 
 
 document.addEventListener('DOMContentLoaded', function (e) {
-    /*
-        generate a canvas with some sort of image -
-        in this example a promo picture from the classic
-        B-Horror film "The Blob"
-    */
-    // var canvas=document.getElementById('canvas');
-    // var ctx=canvas.getContext('2d');
-    // var img=new Image();
-    // img.src='../resources/placeholder.png';
-    // img.onload=function(){
-    //     canvas.width=img.width;
-    //     canvas.height=img.height;
-    //     ctx.drawImage( img, 0, 0, canvas.width, canvas.height );
-    // }
 
-
-    /*
-        Button click event handler
-        create FormData Object and read the canvas data
-        then send via ajax to a PHP script ( in this case the same page )
-        to process the uploaded image.
-    */
     function bindEvents(event) {
 
         var fd = new FormData();
@@ -176,10 +155,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
         }
 
         ajax.call(this, 'scripts/upload.php', fd, callback);
-        bttn.style.display ='none';
-        idlebtn.style.display='block';
+        bttn.style.display = 'none';
+        idlebtn.style.display = 'block';
         setTimeout(function () {
-            idlebtn.style.display='none';
+            idlebtn.style.display = 'none';
             bttn.style.display = 'block';
         }, 5000);
     }

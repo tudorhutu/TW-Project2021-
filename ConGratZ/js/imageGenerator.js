@@ -1,8 +1,9 @@
 let topTextInput, bottomTextInput, topsize, bottomsize, bottomcol, image, generateBtn, canvas, ctx, placeholder,
-    customurl, customurlf, saveimage, bgInput, foreground, animation, drop1, drop2, submiturl;
+    customurl, customurlf, saveimage, bgInput, foreground, animation, drop1, drop2, submiturl, bttn, idlebtn;
 let linktext;
 
 function generate(img, topTextInput, bottomTextInput, topsize, bottomsize, bottomcol) {
+    bttn.style.display = 'block';
     drop1.style.display = "block";
     drop2.style.display = "block";
     let fontsize;
@@ -47,6 +48,8 @@ function init() {
     animation = document.getElementById("animation");
     ctx = canvas.getContext('2d');
     submiturl = document.getElementById('submiturl');
+    bttn = document.getElementById("bttn");
+    idlebtn = document.getElementById('submitwait');
 
 
     canvas.width = canvas.height = 0;
@@ -70,21 +73,7 @@ function init() {
 
     });
 
-    submiturl.addEventListener("click", function () {
-        var forepath = foreground.src;
-        var animpath = animation.src;
-        forepath = forepath.replace('http://79.112.52.162', '');
-        animpath =animpath.replace('http://79.112.52.162', '');
-        // forepath = forepath.replace('http://localhost:63342', '');
-        // animpath = animpath.replace('http://localhost:63342', '');
 
-        document.getElementById('customlink').style.display = 'block';
-        linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + forepath + '&animid=' + animpath;
-        document.getElementById("linktext2").href=linktext;
-
-
-        // document.getElementById('customlink').innerHTML="<a href=\"display.html\" onclick=\"location.href=this.href+'?foregrundid='+foreground.src+'&animid='+animation.src;return false;\">Link</a>";
-    })
 
 }
 
@@ -103,3 +92,60 @@ function loadAnimation(img) {
 }
 
 init();
+
+
+document.addEventListener('DOMContentLoaded', function (e) {
+
+    function bindEvents(event) {
+
+        var fd = new FormData();
+        fd.append('action', 'save');
+        fd.append('image', canvas.toDataURL('image/jpg').replace(/^data:image\/(png|jpg);base64,/, ''));
+        fd.append('filename', Math.random() + '.jpg')
+
+        var ajax = function (url, data, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) callback.call(this, this.response);
+            };
+            xhr.open('POST', url, true);
+            console.log(data);
+            xhr.send(data);
+        };
+
+        var callback = function (r) {
+            var newlink = (' ' + r.toString()).slice(1);
+
+            newlink = newlink.replace("F:/xampp/htdocs/ConGratZ", 'http://79.112.52.162');
+            console.log(newlink);
+            document.getElementById('customlink').style.display = 'block';
+            document.getElementById("linktext").href = newlink;
+            document.getElementById("displaytext").innerHTML = newlink;
+
+            ///////////////////////////////////////
+
+            // var forepath = foreground.src;
+            // var animpath = animation.src;
+            // forepath = forepath.replace('http://79.112.52.162', '');
+            // animpath = animpath.replace('http://79.112.52.162', '');
+            //
+            // document.getElementById('customlink').style.display = 'block';
+            // linktext = document.getElementById("displaytext").innerHTML = document.getElementById("linktext").href + '?foregrundid=' + forepath + '&animid=' + animpath;
+            // document.getElementById("linktext2").href = linktext;
+
+            ///////////////////////////////////////
+        }
+
+        ajax.call(this, 'scripts/upload2.php', fd, callback);
+        bttn.style.display = 'none';
+        idlebtn.style.display = 'block';
+        setTimeout(function () {
+            idlebtn.style.display = 'none';
+            bttn.style.display = 'block';
+        }, 5000);
+    }
+
+
+    document.getElementById('bttn').addEventListener('click', bindEvents);
+
+});
