@@ -1,5 +1,5 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext,bttn;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn;
 
 function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
@@ -71,7 +71,7 @@ function init() {
     emailIn = document.getElementById("email");
     downloadLnk = document.getElementById("downloadLnk");
     submiturl = document.getElementById('submiturl');
-    bttn =document.getElementById("bttn");
+    bttn = document.getElementById("bttn");
     ctx = canvas.getContext('2d');
 
     canvas.width = canvas.height = 0;
@@ -87,7 +87,7 @@ function init() {
         img.onload = function () {
             placeholder.style.display = 'none';
             downloadLnk.style.display = 'block';
-            bttn.style.display= 'block';
+            bttn.style.display = 'block';
             generate(img, topTextInput.value, bottomTextInput.value, companyImput.value, addressIn.value, phoneIn.value, emailIn.value, topsize.value, rightsize.value, topcol.value, bottomcol.value);
 
         }
@@ -176,6 +176,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
         }
 
         ajax.call(this, 'scripts/upload.php', fd, callback);
+        bttn.style.display ='none';
+        setTimeout(function () {
+            bttn.style.display = 'block';
+        }, 5000);
     }
 
 
