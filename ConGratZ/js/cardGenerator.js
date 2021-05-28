@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
         var callback = function (r) {
             alert(r);
-            linktext = r;
+            linktext = r.toString();
             linktext.replace("F:/xampp/htdocs/ConGratZ", '');
             console.log(linktext);
             document.getElementById("linktext").href = linktext;
