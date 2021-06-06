@@ -125,7 +125,7 @@ window.onload = function () {
 
 }
 
-////////////////////send canvas
+/////////////////////send canvas
 
 
 document.addEventListener('DOMContentLoaded', function (e) {
