@@ -1,5 +1,5 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn, idlebtn;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn, idlebtn, linktextqr,qrcode;
 
 function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
@@ -75,6 +75,11 @@ function init() {
     ctx = canvas.getContext('2d');
     idlebtn = document.getElementById('submitwait');
     canvas.width = canvas.height = 0;
+    qrcode = new QRCode(document.getElementById("qrcode"), {
+        width: 100,
+        height: 100
+    });
+
 
     generateBtn.addEventListener('click', function () {
         let img = new Image;
@@ -146,12 +151,15 @@ document.addEventListener('DOMContentLoaded', function (e) {
             var newlink = (' ' + r.toString()).slice(1);
 
             // newlink = r.toString().slice();
-            newlink = newlink.replace("F:/xampp/htdocs/ConGratZ", 'http://79.112.52.162');
+            newlink = newlink.replace("F:/xampp/htdocs/ConGratZ", 'http://79.112.49.145');
             // newlink =newlink.replace("<?php","alshfjaskhfjkas");
             // alert(r);
             console.log(newlink);
             document.getElementById("linktext").href = newlink;
             document.getElementById("displaytext").innerHTML = newlink;
+            linktextqr = newlink;
+            qrcode.makeCode(linktextqr);
+
         }
 
         ajax.call(this, 'scripts/upload.php', fd, callback);

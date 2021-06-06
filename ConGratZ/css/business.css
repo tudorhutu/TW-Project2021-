@@ -120,6 +120,7 @@ textarea {
     display: none;
 }
 
+#qrcode{display: block;}
 
 @media screen and (max-width: 834px) {
 

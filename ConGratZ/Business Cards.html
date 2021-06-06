@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/business.css">
+    <script type="text/javascript" src="js/qrcode.js"></script>
     <title>Business Card Generator</title>
     <link rel="icon" href=
             "resources/asdlogo%20-%20Copy.ico"
@@ -13,21 +14,21 @@
 </head>
 <body>
 <header>
-<div class="toolbar" id="myTopnav">
-    <div id="container">
-        <img class="logo-img" src="resources/logo.svg" alt="Trulli" width="60">
-        <p id="logotext">
-            CongratZ
-        </p>
+    <div class="toolbar" id="myTopnav">
+        <div id="container">
+            <img class="logo-img" src="resources/logo.svg" alt="Trulli" width="60">
+            <p id="logotext">
+                CongratZ
+            </p>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="Greeting%20Cards.html">Greeting Cards</a>
+        <a class="active" href="Business%20Cards.html">Business Cards</a>
+        <a href="About.html">About</a>
+        <a href="index.html" class="icon">
+            <div class="fa fa-bars" style="font-size: 40px;margin-top: -15px">&#8962</div>
+        </a>
     </div>
-    <a href="index.html">Home</a>
-    <a href="Greeting%20Cards.html">Greeting Cards</a>
-    <a class="active" href="Business%20Cards.html">Business Cards</a>
-    <a href="About.html">About</a>
-    <a href="index.html" class="icon">
-        <div class="fa fa-bars" style="font-size: 40px;margin-top: -15px">&#8962</div>
-    </a>
-</div>
 </header>
 
 <div id="mySidenav" class="sidenav">
@@ -52,9 +53,11 @@
         <button onclick="myFunction3()" class="dropbtn">Font Size</button>
         <div id="myDropdown3" class="dropdown-content">
             <a class="noninteract"> Left-side text size: </a>
-            <a> <label for="topsize"></label><input type="range" id="topsize" min="0.10" max="0.15" value="0.15" step="0.01"></a>
+            <a> <label for="topsize"></label><input type="range" id="topsize" min="0.10" max="0.15" value="0.15"
+                                                    step="0.01"></a>
             <a class="noninteract"> Right-side text size: </a>
-            <a> <label for="rightsize"></label><input type="range" id="rightsize" min="0.10" max="0.15" value="0.15" step="0.01"></a>
+            <a> <label for="rightsize"></label><input type="range" id="rightsize" min="0.10" max="0.15" value="0.15"
+                                                      step="0.01"></a>
         </div>
     </div>
 
@@ -97,7 +100,7 @@
         </label>
     </form>
     <span class="textUnderSlides">Surname:</span>
-    <form id="namewriting1" >
+    <form id="namewriting1">
         <label>
             <textarea id="bottom-text" placeholder="Surname"></textarea>
         </label>
@@ -105,7 +108,7 @@
     <span class="textUnderSlides">Company:</span>
     <form id="namewriting2">
         <label>
-        <textarea id="company" placeholder="Company"></textarea>
+            <textarea id="company" placeholder="Company"></textarea>
         </label>
     </form>
     <span class="textUnderSlides">Phone Number:</span>
@@ -129,17 +132,19 @@
 </div>
 
 <a id="downloadLnk" download="YourCard.jpg">
-<button class="submitbutton" id="submit1">Save as image file</button>
+    <button class="submitbutton" id="submit1">Save as image file</button>
 </a>
 <br>
-<input class="submitbutton" type='button' id='bttn'  value='Share as URL' />
+<input class="submitbutton" type='button' id='bttn' value='Share as URL'/>
 <button class="submitbutton" id="submitwait">Please wait</button>
 <div id="customlink">
- <a id="linktext" ><div id="displaytext"></div></a>
-
+    <a id="linktext">
+        <div id="displaytext"></div>
+    </a>
+    <div id="qrcode" style="width:100px; height:100px;"></div>
 </div>
 <br>
 <button class="submitbutton" id="generate">Generate!</button>
-</body>
 <script src="js/cardGenerator.js"></script>
+</body>
 </html>
