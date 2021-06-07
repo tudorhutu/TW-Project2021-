@@ -44,23 +44,36 @@
         Aplicația va permite și realizarea de carți de vizită, eventual pe baza unui document XML ce include numele + datele de contact ale mai multor persoane, fiind capabilă să exporte aceste carduri într-un fișier PDF pentru a fi tiparite. Cardurile vor fi disponibile și în format electronic (e.g. vcard sau QR code) ce va putea fi trimis ca fișier atașat unui email.
     </p>
 </section>
-<section id="config">
-    <h2>Configurare</h2>
+<section id="arhitectura">
+    <h2>Arhitectura aplicatiei</h2>
     <p>
-        De adaugat!
+        Aplicatia utilizeaza JavaScript Canvas pentru a genera imagini cu custom text pe ele. In urma generarii, ele sunt salvate pe server, iar adresa lor din server este utilizata in generarea link-ului catre acestea.
+        In cazul felicitarilor cu elemente animate, pe langa canvas-ul cu custom text, utilizam un PNG si un GIF pentru a realiza o animatie intr-o zona delimitata,
+        acestea fiind de asemenea salvate pe server.
+        Pentru salvarea pe server a imaginilor, se transforma canvas-ul generat intr-un JPG care este transmis catre server prin intermediul tehnologii Ajax.
+        Server-ul apoi preia imaginea primita si, in urma procesarii ei in fisierul upload.php pentru felicitari, respectiv uplaod2.php pentru carti de vizita, salveaza imaginea.
+        Pentru a evita salvarea in masa a imaginilor generate pe server, butonul Share as URL are un cooldown de 5 secunde.
     </p>
-    <section id="bd">
-        <h2>Baza de date</h2>
-        De adaugat!
-    </section>
-    <section id="sender">
-        <h2>Configurarea pentru trimiterea felicitarilor/cartilor de vizita</h2>
-        <p>
-            De adaugat!
-        </p>
-    </section>
-  </section>
-
+</section>
+<section id="progres">
+    <h2>Progresul aplicatiei</h2>
+    <p>
+        Pana in saptamana a 8-a am realizat elementele de design si interfata ale site-ului pe care le-am adaptat pe masura ce am adaugat functionalitati.
+        Am folosit <a href="https://www.youtube.com/watch?v=aIgWxXlpRvU">acest tutorial</a> pentru a avea un inceput de generator de imagini cu custom text pe ele.
+        Dupa ce l-am adaptat la cerinta, am creat mai multe template-uri de felicitari si carti de vizita folosind Adobe Photoshop, dar si animatii pentru felicitari.
+        In urma rezolvarii cerintei de generare a cartilor de vizita, am implementat salvarea pe server a imaginilor folosind Ajax si PHP.
+        Generarea de QR Code a fost implementata cu ajutorul <a href="https://davidshimjs.github.io/qrcodejs/">acestei librarii</a> open source.
+    </p>
+</section>
+<section id="codemanagement">
+    <h2>Code management</h2>
+    <p>
+        Pentru code management am utilizat GitHub, o platforma pentru stocare si management online al codului nostru sursa.
+        Proiectul in sine este hostat pe un server Apache folosind XAMPP pe unul dintre calculatoarele membrilor echipei, facand posibila accesul la o versiune live a site-ului.
+        Deoarece server-ul este hostat si poate fi accesat de catre oricine cu link, iar membrii echipei au avut nevoie de accesul instant la o versiune live a site-ului in urma unui commit,
+        am folosit un script de Python care da autopull de pe GitHub, astfel facand posibila vizualizarea oricarei schimbari in timp real pe un site functional.
+    </p>
+</section>
 
 
 </body>
