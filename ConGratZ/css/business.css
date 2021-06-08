@@ -119,6 +119,10 @@ textarea {
 #downloadLnk {
     display: none;
 }
+#download{
+    display: none;
+}
+
 
 #qrcode{display: block;}
 

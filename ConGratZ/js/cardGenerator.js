@@ -1,5 +1,6 @@
 let topTextInput, bottomTextInput, companyImput, topsize, rightsize, topcol, bottomcol, image, generateBtn, canvas, ctx,
-    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn, idlebtn, linktextqr,qrcode;
+    customurl, addressIn, phoneIn, emailIn, downloadLnk, submiturl, linktext, bttn, idlebtn, linktextqr, qrcode,
+    downloadpdf;
 
 function generate(img, topTextInput, bottomTextInput, companyImput, addressIn, phoneIn, emailIn, topsize, rightsize, topcol, bottomcol) {
     let fontsize;
@@ -79,7 +80,7 @@ function init() {
         width: 100,
         height: 100
     });
-
+    downloadpdf = document.getElementById("download");
 
     generateBtn.addEventListener('click', function () {
         let img = new Image;
@@ -93,11 +94,21 @@ function init() {
             placeholder.style.display = 'none';
             downloadLnk.style.display = 'block';
             bttn.style.display = 'block';
+            downloadpdf.style.display='block';
             generate(img, topTextInput.value, bottomTextInput.value, companyImput.value, addressIn.value, phoneIn.value, emailIn.value, topsize.value, rightsize.value, topcol.value, bottomcol.value);
 
         }
 
     });
+
+    downloadpdf.addEventListener("click", function () {
+        // only jpeg is supported by jsPDF
+        var imgData = canvas.toDataURL("image/jpeg", 1.0);
+        var pdf = new jsPDF();
+
+        pdf.addImage(imgData, 'JPEG', 0, 0, 210, 110);
+        pdf.save("generatedCard.pdf");
+    }, false);
 
 }
 
