@@ -94,7 +94,7 @@ function init() {
             placeholder.style.display = 'none';
             downloadLnk.style.display = 'block';
             bttn.style.display = 'block';
-            downloadpdf.style.display='block';
+            downloadpdf.style.display = 'block';
             generate(img, topTextInput.value, bottomTextInput.value, companyImput.value, addressIn.value, phoneIn.value, emailIn.value, topsize.value, rightsize.value, topcol.value, bottomcol.value);
 
         }
@@ -104,7 +104,7 @@ function init() {
     downloadpdf.addEventListener("click", function () {
         // only jpeg is supported by jsPDF
         var imgData = canvas.toDataURL("image/jpeg", 1.0);
-        var pdf = new jsPDF();
+        var pdf = new jsPDF('l', 'mm', [210, 110]);
 
         pdf.addImage(imgData, 'JPEG', 0, 0, 210, 110);
         pdf.save("generatedCard.pdf");
