@@ -240,6 +240,12 @@ body {
     opacity: 50%;
 }
 
+@media only screen and (max-width: 1490px) {
+    .grid-container {
+        overflow: scroll;
+    }
+}
+
 @media only screen and (max-width: 834px) {
     .logo-img {
         width: 65px;
@@ -277,7 +283,9 @@ body {
 
     .grid-container {
         overflow: scroll;
+        margin-top: -120px;
     }
+
 }
 
 @media only screen and (max-width: 321px) {
